@@ -1,0 +1,1164 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Components > Datepicker
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*!
+ * Datepicker for Bootstrap v1.9.0 (https://github.com/uxsolutions/bootstrap-datepicker)
+ */
+
+.datepicker {
+    border-radius: 8px;
+    direction: ltr;
+}
+
+.datepicker-inline {
+    width: 220px;
+}
+
+.datepicker-rtl {
+    direction: rtl;
+
+    &.dropdown-menu {
+        left: auto;
+    }
+
+    table tr td span {
+        float: right;
+    }
+}
+
+.datepicker-dropdown {
+    top: 0;
+    left: 0;
+    padding: 4px;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid rgba($dark, 0.15);
+        border-top: 0;
+        border-bottom-color: rgba($dark, 0.2);
+        position: absolute;
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid darken($secondary, 20%);
+        border-top: 0;
+        position: absolute;
+    }
+
+    &.datepicker-orient-left {
+        &:before {
+            left: 6px;
+        }
+
+        &:after {
+            left: 7px;
+        }
+    }
+
+    &.datepicker-orient-right {
+        &:before {
+            right: 6px;
+        }
+
+        &:after {
+            right: 7px;
+        }
+    }
+
+    &.datepicker-orient-bottom {
+        &:before {
+            top: -7px;
+        }
+
+        &:after {
+            top: -6px;
+        }
+    }
+
+    &.datepicker-orient-top {
+        &:before {
+            bottom: -7px;
+            border-bottom: 0;
+            border-top: 7px solid rgba($dark, 0.15);
+        }
+
+        &:after {
+            bottom: -6px;
+            border-bottom: 0;
+            border-top: 6px solid $white;
+        }
+    }
+}
+
+.datepicker table {
+    margin: 0;
+    user-select: none;
+
+    tr {
+        td, th {
+            text-align: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 4px;
+            border: none;
+        }
+    }
+}
+
+.table-striped .datepicker table tr {
+    td,
+    th {
+        background-color: transparent;
+    }
+}
+
+.datepicker table tr td {
+    &.old,
+    &.new {
+        color: $lightgrey;
+    }
+
+    &.day:hover, &.focused {
+        background: $border-color;
+        cursor: pointer;
+    }
+
+    &.disabled {
+        background: none;
+        color: $lightgrey;
+        cursor: default;
+
+        &:hover {
+            background: none;
+            color: $lightgrey;
+            cursor: default;
+        }
+    }
+
+    &.highlighted {
+        color: $dark;
+        background-color: lighten($primary, 38%);
+        border-color: lighten($primary, 22%);
+        border-radius: 0;
+
+        &:focus, &.focus {
+            color: $dark;
+            background-color: lighten($primary, 36%);
+            border-color: lighten($primary, 12%);
+        }
+
+        &:hover, &:active, &.active {
+            color: $dark;
+            background-color: lighten($primary, 36%);
+            border-color: lighten($primary, 6%);
+        }
+
+        &:active:hover, &.active:hover, &:active:focus, &.active:focus, &:active.focus, &.active.focus {
+            color: $dark;
+            background-color: lighten($primary, 34%);
+            border-color: lighten($primary, 0%);
+        }
+
+        &.disabled:hover, &[disabled]:hover {
+            background-color: lighten($primary, 38%);
+            border-color: lighten($primary, 22%);
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.highlighted:hover {
+    background-color: lighten($primary, 38%);
+    border-color: lighten($primary, 22%);
+}
+
+fieldset[disabled] .datepicker table tr td.highlighted:focus {
+    background-color: lighten($primary, 38%);
+    border-color: lighten($primary, 22%);
+}
+
+fieldset[disabled] .datepicker table tr td.highlighted.focus {
+    background-color: lighten($primary, 38%);
+    border-color: lighten($primary, 22%);
+}
+
+.datepicker table tr td.highlighted {
+    &.disabled:focus, &[disabled]:focus {
+        background-color: lighten($primary, 38%);
+        border-color: lighten($primary, 22%);
+    }
+
+    &.disabled.focus, &[disabled].focus {
+        background-color: lighten($primary, 38%);
+        border-color: lighten($primary, 22%);
+    }
+}
+
+.datepicker table tr td {
+    &.highlighted {
+        &.focused {
+            background: lighten($primary, 38%);
+        }
+
+        &.disabled {
+            background: lighten($primary, 38%);
+            color: $lightgrey;
+
+            &:active {
+                background: lighten($primary, 38%);
+                color: $lightgrey;
+            }
+        }
+    }
+
+    &.today {
+        color: $dark;
+        background-color: lighten($primary, 30%);
+        border-color: lighten($primary, 8%);
+
+        &:focus, &.focus {
+            color: $dark;
+            background-color: lighten($primary, 36%);
+            border-color: lighten($primary, 12%);
+        }
+
+        &:hover, &:active, &.active {
+            color: $dark;
+            background-color: lighten($primary, 36%);
+            border-color: lighten($primary, 6%);
+        }
+
+        &:active:hover, &.active:hover, &:active:focus, &.active:focus, &:active.focus, &.active.focus {
+            color: $dark;
+            background-color: lighten($primary, 34%);
+            border-color: lighten($primary, 0%);
+        }
+
+        &.disabled:hover, &[disabled]:hover {
+            background-color: lighten($primary, 30%);
+            border-color: lighten($primary, 8%);
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.today:hover {
+    background-color: lighten($primary, 30%);
+    border-color: lighten($primary, 8%);
+}
+
+fieldset[disabled] .datepicker table tr td.today:focus {
+    background-color: lighten($primary, 30%);
+    border-color: lighten($primary, 8%);
+}
+
+fieldset[disabled] .datepicker table tr td.today.focus {
+    background-color: lighten($primary, 30%);
+    border-color: lighten($primary, 8%);
+}
+
+.datepicker table tr td.today {
+    &.disabled:focus, &[disabled]:focus {
+        background-color: lighten($primary, 30%);
+        border-color: lighten($primary, 8%);
+    }
+
+    &.disabled.focus, &[disabled].focus {
+        background-color: lighten($primary, 30%);
+        border-color: lighten($primary, 8%);
+    }
+}
+
+.datepicker table tr td {
+    &.today {
+        &.focused {
+            background: lighten($primary, 8%);
+        }
+
+        &.disabled {
+            background: lighten($primary, 30%);
+            color: $lightgrey;
+
+            &:active {
+                background: lighten($primary, 30%);
+                color: $lightgrey;
+            }
+        }
+    }
+
+    &.range {
+        color: $dark;
+        background-color: $border-color;
+        border-color: $border-color;
+        border-radius: 0;
+
+        &:focus, &.focus {
+            color: $dark;
+            background-color: $grey-100;
+            border-color: $grey;
+        }
+
+        &:hover, &:active, &.active {
+            color: $dark;
+            background-color: $grey-100;
+            border-color: $grey-500;
+        }
+
+        &:active:hover, &.active:hover, &:active:focus, &.active:focus, &:active.focus, &.active.focus {
+            color: $dark;
+            background-color: $grey-200;
+            border-color: $grey;
+        }
+
+        &.disabled:hover, &[disabled]:hover {
+            background-color: $grey-100;
+            border-color: $border-color;
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.range:hover {
+    background-color: $grey-100;
+    border-color: $border-color;
+}
+
+fieldset[disabled] .datepicker table tr td.range:focus {
+    background-color: $grey-100;
+    border-color: $border-color;
+}
+
+fieldset[disabled] .datepicker table tr td.range.focus {
+    background-color: $grey-100;
+    border-color: $border-color;
+}
+
+.datepicker table tr td.range {
+    &.disabled:focus, &[disabled]:focus {
+        background-color: $grey-100;
+        border-color: $border-color;
+    }
+
+    &.disabled.focus, &[disabled].focus {
+        background-color: $grey-100;
+        border-color: $border-color;
+    }
+
+    &.focused {
+        background: $grey-200;
+    }
+
+    &.disabled {
+        background: $border-color;
+        color: $lightgrey;
+
+        &:active {
+            background: $border-color;
+            color: $lightgrey;
+        }
+    }
+
+    &.highlighted {
+        color: $dark;
+        background-color: lighten($info, 38%);
+        border-color: lighten($info, 22%);
+
+        &:focus, &.focus {
+            color: $dark;
+            background-color: lighten($info, 32%);
+            border-color: darken($info, 6%);
+        }
+
+        &:hover, &:active, &.active {
+            color: $dark;
+            background-color: lighten($info, 32%);
+            border-color: lighten($info, 8%);
+        }
+
+        &:active:hover, &.active:hover, &:active:focus, &.active:focus, &:active.focus, &.active.focus {
+            color: $dark;
+            background-color: lighten($info, 18%);
+            border-color: lighten($info, 0%);
+        }
+
+        &.disabled:hover, &[disabled]:hover {
+            background-color: lighten($info, 38%);
+            border-color: lighten($info, 22%);
+        }
+    }
+}
+
+.datepicker table tr td.range.highlighted {
+    &.disabled:focus, &[disabled]:focus {
+        background-color: lighten($info, 38%);
+        border-color: lighten($info, 22%);
+    }
+}
+
+.datepicker table tr td.range.highlighted {
+    &.disabled.focus, &[disabled].focus {
+        background-color: lighten($info, 38%);
+        border-color: lighten($info, 22%);
+    }
+}
+
+.datepicker table tr td.range {
+    &.highlighted {
+        &.focused {
+            background: lighten($info, 32%);
+        }
+
+        &.disabled {
+            background: lighten($info, 38%);
+            color: $lightgrey;
+
+            &:active {
+                background: lighten($info, 38%);
+                color: $lightgrey;
+            }
+        }
+    }
+
+    &.today {
+        color: $dark;
+        background-color: #f7ca77;
+        border-color: #f1a417;
+
+        &:focus, &.focus {
+            color: $dark;
+            background-color: #f4b747;
+            border-color: #815608;
+        }
+
+        &:hover, &:active, &.active {
+            color: $dark;
+            background-color: #f4b747;
+            border-color: #bf800c;
+        }
+
+        &:active:hover, &.active:hover, &:active:focus, &.active:focus, &:active.focus, &.active.focus {
+            color: $dark;
+            background-color: #f2aa25;
+            border-color: #815608;
+        }
+
+        &.disabled:hover, &[disabled]:hover {
+            background-color: #f7ca77;
+            border-color: #f1a417;
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.range.highlighted:hover {
+    background-color: lighten($info, 38%);
+    border-color: lighten($info, 22%);
+}
+
+fieldset[disabled] .datepicker table tr td.range.highlighted:focus {
+    background-color: lighten($info, 38%);
+    border-color: lighten($info, 22%);
+}
+
+fieldset[disabled] .datepicker table tr td.range.highlighted.focus {
+    background-color: lighten($info, 38%);
+    border-color: lighten($info, 22%);
+}
+
+fieldset[disabled] .datepicker table tr td.range.today:hover {
+    background-color: lighten($primary, 24%);
+    border-color: lighten($primary, 12%);
+}
+
+fieldset[disabled] .datepicker table tr td.range.today:focus {
+    background-color: lighten($primary, 24%);
+    border-color: lighten($primary, 12%);
+}
+
+fieldset[disabled] .datepicker table tr td.range.today.focus {
+    background-color: lighten($primary, 24%);
+    border-color: lighten($primary, 12%);
+}
+
+.datepicker table tr td.range.today {
+    &.disabled:focus, &[disabled]:focus {
+        background-color: lighten($primary, 24%);
+        border-color: lighten($primary, 12%);
+    }
+}
+
+.datepicker table tr td.range.today {
+    &.disabled.focus, &[disabled].focus {
+        background-color: lighten($primary, 24%);
+        border-color: lighten($primary, 12%);
+    }
+}
+
+.datepicker table tr td {
+    &.range.today.disabled {
+        background: lighten($primary, 8%);
+        color: $lightgrey;
+
+        &:active {
+            background: lighten($primary, 8%);
+            color: $lightgrey;
+        }
+    }
+
+    &.selected {
+        color: $white;
+        background-color: $lightgrey;
+        border-color: $grey-400;
+        text-shadow: 0 -1px 0 rgba($dark, 0.25);
+
+        &.range-start {
+            border-radius: 4px 0 0 4px;
+        }
+
+        &.range-end {
+            border-radius: 0 4px 4px 0;
+        }
+
+        &.highlighted {
+            color: $white;
+            background-color: $lightgrey;
+            border-color: $grey-400;
+            text-shadow: 0 -1px 0 rgba($dark, 0.25);
+        }
+
+        &:focus, &.highlighted:focus, &.focus, &.highlighted.focus {
+            color: $white;
+            background-color: $grey-800;
+            border-color: $black;
+        }
+
+        &:hover, &.highlighted:hover, &:active, &.highlighted:active, &.active, &.highlighted.active {
+            color: $white;
+            background-color: $grey-800;
+            border-color: $grey-900;
+        }
+
+        &:active:hover, &.highlighted:active:hover, &.active:hover, &.highlighted.active:hover, &:active:focus, &.highlighted:active:focus, &.active:focus, &.highlighted.active:focus, &:active.focus, &.highlighted:active.focus, &.active.focus, &.highlighted.active.focus {
+            color: $white;
+            background-color: $grey-700;
+            border-color: $black;
+        }
+
+        &.disabled:hover, &.highlighted.disabled:hover, &[disabled]:hover, &.highlighted[disabled]:hover {
+            background-color: $lightgrey;
+            border-color: $grey-400;
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.selected {
+    &:hover, &.highlighted:hover {
+        background-color: $lightgrey;
+        border-color: $grey-400;
+    }
+
+    &:focus, &.highlighted:focus {
+        background-color: $lightgrey;
+        border-color: $grey-400;
+    }
+
+    &.focus, &.highlighted.focus {
+        background-color: $lightgrey;
+        border-color: $grey-400;
+    }
+}
+
+.datepicker table tr td.selected {
+    &.disabled:focus, &.highlighted.disabled:focus, &[disabled]:focus, &.highlighted[disabled]:focus {
+        background-color: $lightgrey;
+        border-color: $grey-400;
+    }
+}
+
+.datepicker table tr td.selected {
+    &.disabled.focus, &.highlighted.disabled.focus, &[disabled].focus, &.highlighted[disabled].focus {
+        background-color: $lightgrey;
+        border-color: $grey-400;
+    }
+}
+
+.datepicker table tr td.active {
+    color: $white;
+    background-color: darken($secondary, 14%);
+    border-color: darken($secondary, 18%);
+    text-shadow: 0 -1px 0 rgba($dark, 0.25);
+
+    &.highlighted {
+        color: $white;
+        background-color: darken($secondary, 14%);
+        border-color: darken($secondary, 18%);
+        text-shadow: 0 -1px 0 rgba($dark, 0.25);
+    }
+
+    &:focus, &.highlighted:focus, &.focus, &.highlighted.focus {
+        color: $white;
+        background-color: darken($secondary, 12%);
+        border-color: darken($secondary, 16%);
+    }
+
+    &:hover, &.highlighted:hover, &:active, &.highlighted:active, &.active, &.highlighted.active {
+        color: $white;
+        background-color: darken($secondary, 12%);
+        border-color: darken($secondary, 16%);
+    }
+
+    &:active:hover, &.highlighted:active:hover, &.active:hover, &.highlighted.active:hover, &:active:focus, &.highlighted:active:focus, &.active:focus, &.highlighted.active:focus, &:active.focus, &.highlighted:active.focus, &.active.focus, &.highlighted.active.focus {
+        color: $white;
+        background-color: darken($secondary, 12%);
+        border-color: darken($secondary, 16%);
+    }
+
+    &.disabled:hover, &.highlighted.disabled:hover, &[disabled]:hover, &.highlighted[disabled]:hover {
+        background-color: darken($secondary, 14%);
+        border-color: darken($secondary, 18%);
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.active {
+    &:hover, &.highlighted:hover {
+        background-color: darken($secondary, 14%);
+        border-color: darken($secondary, 18%);
+    }
+}
+
+.datepicker table tr td.active {
+    &.disabled:focus, &.highlighted.disabled:focus, &[disabled]:focus, &.highlighted[disabled]:focus {
+        background-color: darken($secondary, 14%);
+        border-color: darken($secondary, 18%);
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.active {
+    &:focus, &.highlighted:focus {
+        background-color: darken($secondary, 12%);
+        border-color: darken($secondary, 18%);
+    }
+}
+
+.datepicker table tr td.active {
+    &.disabled.focus, &.highlighted.disabled.focus, &[disabled].focus, &.highlighted[disabled].focus {
+        background-color: darken($secondary, 12%);
+        border-color: darken($secondary, 18%);
+    }
+}
+
+fieldset[disabled] .datepicker table tr td.active {
+    &.focus, &.highlighted.focus {
+        background-color: darken($secondary, 12%);
+        border-color: darken($secondary, 18%);
+    }
+}
+
+.datepicker table tr td span {
+    display: block;
+    width: 23%;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    margin: 1%;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover,
+    &.focused {
+        background: $border-color;
+    }
+
+    &.disabled {
+        background: none;
+        color: $lightgrey;
+        cursor: default;
+
+        &:hover {
+            background: none;
+            color: $lightgrey;
+            cursor: default;
+        }
+    }
+
+    &.active {
+        color: $white;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        text-shadow: 0 -1px 0 rgba($dark, 0.25);
+
+        &:hover {
+            color: $white;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            text-shadow: 0 -1px 0 rgba($dark, 0.25);
+        }
+
+        &.disabled {
+            color: $white;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            text-shadow: 0 -1px 0 rgba($dark, 0.25);
+
+            &:hover {
+                color: $white;
+                background-color: #337ab7;
+                border-color: #2e6da4;
+                text-shadow: 0 -1px 0 rgba($dark, 0.25);
+            }
+        }
+
+        &:focus, &:hover:focus {
+            color: $white;
+            background-color: #009688;
+            border-color: darken($secondary, 16%);
+        }
+
+        &.disabled {
+            &:focus, &:hover:focus {
+                color: $white;
+                background-color: #009688;
+                border-color: darken($secondary, 16%);
+            }
+        }
+
+        &.focus, &:hover.focus {
+            color: $white;
+            background-color: #009688;
+            border-color: darken($secondary, 16%);
+        }
+
+        &.disabled {
+            &.focus, &:hover.focus {
+                color: $white;
+                background-color: #009688;
+                border-color: darken($secondary, 16%);
+            }
+        }
+
+        &:hover, &.disabled:hover, &:active, &:hover:active {
+            color: $white;
+            background-color: #009688;
+            border-color: #0CA678;
+        }
+
+        &.disabled {
+            &:active, &:hover:active {
+                color: $white;
+                background-color: #009688;
+                border-color: #0CA678;
+            }
+        }
+
+        &.active, &:hover.active {
+            color: $white;
+            background-color: #009688;
+            border-color: #0CA678;
+        }
+
+        &.disabled {
+            &.active, &:hover.active {
+                color: $white;
+                background-color: #009688;
+                border-color: #0CA678;
+            }
+        }
+
+        &:active:hover, &.disabled:active:hover, &.active:hover, &.disabled.active:hover, &:active:focus, &:hover:active:focus {
+            color: $white;
+            background-color: #0CA678;
+            border-color: darken($secondary, 16%);
+        }
+
+        &.disabled {
+            &:active:focus, &:hover:active:focus {
+                color: $white;
+                background-color: #0CA678;
+                border-color: darken($secondary, 16%);
+            }
+        }
+
+        &.active:focus, &:hover.active:focus {
+            color: $white;
+            background-color: #0CA678;
+            border-color: darken($secondary, 16%);
+        }
+
+        &.disabled {
+            &.active:focus, &:hover.active:focus {
+                color: $white;
+                background-color: #0CA678;
+                border-color: darken($secondary, 16%);
+            }
+        }
+
+        &:active.focus, &:hover:active.focus {
+            color: $white;
+            background-color: #0CA678;
+            border-color: darken($secondary, 16%);
+        }
+
+        &.disabled {
+            &:active.focus, &:hover:active.focus {
+                color: $white;
+                background-color: #0CA678;
+                border-color: darken($secondary, 16%);
+            }
+        }
+
+        &.active.focus, &:hover.active.focus {
+            color: $white;
+            background-color: #0CA678;
+            border-color: darken($secondary, 16%);
+        }
+
+        &.disabled {
+            &.active.focus {
+                color: $white;
+                background-color: #0CA678;
+                border-color: darken($secondary, 16%);
+            }
+
+            &:hover {
+                &.active.focus {
+                    color: $white;
+                    background-color: #0CA678;
+                    border-color: darken($secondary, 16%);
+                }
+
+                background-color: #337ab7;
+                border-color: #2e6da4;
+            }
+        }
+
+        &[disabled]:hover, &.disabled[disabled]:hover {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td span.active {
+    &:hover, &.disabled:hover {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+}
+
+.datepicker table tr td span.active {
+    &.disabled:focus, &:hover.disabled:focus {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    &.disabled {
+        &.disabled:focus, &:hover.disabled:focus {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+
+    &[disabled]:focus, &:hover[disabled]:focus {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    &.disabled {
+        &[disabled]:focus, &:hover[disabled]:focus {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td span.active {
+    &:focus, &:hover:focus {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    &.disabled {
+        &:focus, &:hover:focus {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+}
+
+.datepicker table tr td span.active {
+    &.disabled.focus, &:hover.disabled.focus {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    &.disabled {
+        &.disabled.focus, &:hover.disabled.focus {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+
+    &[disabled].focus, &:hover[disabled].focus {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    &.disabled {
+        &[disabled].focus, &:hover[disabled].focus {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+}
+
+fieldset[disabled] .datepicker table tr td span.active {
+    &.focus, &:hover.focus {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    &.disabled {
+        &.focus, &:hover.focus {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+}
+
+.datepicker {
+    table tr td span {
+        &.old, &.new {
+            color: $lightgrey;
+        }
+    }
+
+    .datepicker-switch {
+        width: 10rem;
+        cursor: pointer;
+        border-radius: 0;
+    }
+
+    .prev, .next, tfoot tr th {
+        cursor: pointer;
+    }
+
+    .datepicker-switch:hover, .prev:hover, .next:hover, tfoot tr th:hover {
+        background: $border-color;
+    }
+
+    .prev.disabled, .next.disabled {
+        visibility: hidden;
+    }
+
+    // .cw {
+    //     font-size: 10px;
+    //     width: 12px;
+    //     padding: 0 2px 0 5px;
+    //     vertical-align: middle;
+    // }
+}
+
+.input-group.date .input-group-addon {
+    cursor: pointer;
+}
+
+.input-daterange {
+    width: 100%;
+
+    .input-group-addon {
+        width: auto;
+        min-width: 16px;
+        padding: 4px 5px;
+        line-height: 1.42857143;
+        border-width: 1px 0;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+}
+
+.datepicker {
+    &.dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        list-style: none;
+        background-color: $white;
+        border: 1px solid $border-color;
+        border: 1px solid rgba($dark, 0.15);
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba($dark, 0.175);
+        background-clip: padding-box;
+        color: $dark;
+        font-size: .875rem;
+        line-height: 1.5;
+
+        th {
+            // padding: .125rem .5rem;
+            // width: 2.5rem;
+       
+        }
+    }
+
+    &.datepicker-inline th,
+    &.dropdown-menu td,
+    &.datepicker-inline td {
+        // padding: .125rem .5rem;
+        // width: 2.5rem;
+   
+    }
+
+    border-radius: 0;
+    padding: 0;
+}
+
+.datepicker-days table {
+    thead, tbody, tfoot {
+        padding: 10px 10px 0 10px;
+        display: list-item;
+    }
+
+    thead {
+        background: darken($secondary, 22%);
+        color: $white;
+        border-radius: 6px 6px 0 0;
+    }
+}
+
+.datepicker-months table thead,
+.datepicker-years table thead,
+.datepicker-decades table thead,
+.datepicker-centuries table thead {
+    background: darken($secondary, 22%);
+    color: $white;
+    border-radius: 6px 6px 0 0;
+}
+
+.datepicker-days table thead tr {
+    &:nth-child(2n+0) {
+        td, th {
+            border-radius: 4px;
+        }
+    }
+
+    &:nth-child(3n+0) {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 12px;
+        color: rgba($white, 0.7);
+    }
+}
+
+.datepicker {
+    &.dropdown-menu {
+        text-align: center;
+        text-align-last: center;
+
+        td, th {
+            // border-radius: 50%;
+            // padding: 0 12px;
+       
+        }
+
+        table tr td.active {
+            background-image: none;
+
+            &:hover {
+                background-image: none;
+            }
+
+            &.disabled {
+                background-image: none;
+
+                &:hover {
+                    background-image: none;
+                }
+            }
+        }
+
+        .prev {
+            border-radius: 6px 0 0 0;
+        }
+
+        .next {
+            border-radius: 0 6px 0 0;
+        }
+
+        .prev, .next {
+            color: rgba($white, 0.5);
+            transition: $transition-base;
+            font-size: 1.125rem;
+            width: 2.5rem;
+            width: 2.5rem;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background: transparent;
+            color: rgba($white, 0.92);
+            font-size: 1.25rem;
+        }
+
+        .datepicker-switch {
+            font-size: 1.125rem;
+            transition: $transition-base;
+            white-space: nowrap;
+            padding: .75rem 1rem;
+
+            &:hover {
+                color: rgba($white, 0.66);
+                background: transparent;
+            }
+        }
+
+        table tr td span {
+            display: inline-block;
+            vertical-align: middle;
+            float: none;
+            border-radius: 2px;
+            width: 31.333333%;
+            height: 2.5rem;
+            line-height: 2.5rem;
+
+            &:nth-child(3n+3) {
+                margin: 0;
+            }
+
+            &.focused,
+            &:hover {
+                background-color: $secondary;
+                background-image: none;
+                color: $white;
+            }
+
+            &.active {
+                background-color: darken($secondary, 12%);
+                background-image: none;
+
+                &:hover {
+                    background-color: darken($secondary, 6%);
+                    background-image: none;
+                }
+
+                &.disabled {
+                    background-color: lighten($secondary, 12%);
+                    background-image: none;
+
+                    &:hover {
+                        background-color: lighten($secondary, 12%);
+                        background-image: none;
+                    }
+                }
+            }
+        }
+    }
+}

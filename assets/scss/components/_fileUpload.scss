@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  COMPONENTS > FILEUPLOAD
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.form-control-file {
+    &[type=file] {
+        overflow: hidden;
+        width: 100%;
+        padding: 0.75rem 1.8125rem;
+        margin-top: .5rem;
+        font-size: .9375rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $grey;
+        background-color: $white;
+        background-clip: padding-box;
+        border: 0.0625rem solid rgba($light, 1);
+        appearance: none;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    &[type=file]:not(:disabled):not([readonly]) {
+        cursor: pointer;
+    }
+
+    &:focus {
+        color: $dark;
+        background-color: $white;
+        border-color: rgba($grey, 0.24);
+        outline: 0;
+        box-shadow: 0 0 1rem 0 rgba($grey, 0.24);
+    }
+
+    &::file-selector-button {
+        padding: .75rem 1.8125rem;
+        margin: -.75rem -1.8125rem;
+        margin-inline-end: 1.8125rem;
+        color: $dark;
+        background-color: $white;
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-inline-end-width: .0625rem;
+        border-radius: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover:not(:disabled):not([readonly])::file-selector-button {
+        background-color: $default;
+    }
+
+    &::-webkit-file-upload-button {
+        padding: .75rem 1.8125rem;
+        margin: -.75rem -1.8125rem;
+        margin-inline-end: 1.8125rem;
+        color: $grey;
+        background-color: $white;
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-inline-end-width: .0625rem;
+        border-radius: 0;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+        background-color: $default;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-control::file-selector-button {
+        transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-control::-webkit-file-upload-button {
+        -webkit-transition: none;
+        transition: none;
+    }
+}

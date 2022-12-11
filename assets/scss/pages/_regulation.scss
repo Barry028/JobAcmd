@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Pages > Regulation
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.regulation-list-section {
+    background-color: $white;
+    padding: .5rem 1.5rem 2rem;
+
+    .regulation-list {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .regulation-list-item {
+            background-color: $grey-100;
+            border-radius: 4px;
+            font-size: 0;
+            padding: 1rem 1.75rem;
+            margin-bottom: .75rem;
+
+            @include shd--hv--ver_1;
+
+            * {
+                transition: $transition-base;
+            }
+
+            a {
+                display: block;
+            }
+
+            &.primary-item {
+                &:hover {
+                    background-color: lighten($primary, 38%);
+
+                    .regulation-list-item-cnt {
+                        .regulation-list-item-tag {
+                            background-color: lighten($primary, 0%);
+                            color: $white;
+                        }
+
+                        .regulation-list-item-date-tag {
+                            background-color: $white;
+                            color: $primary;
+                        }
+
+                        .regulation-list-item-txt {
+                            color: $primary;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .regulation-list-item-icon {
+                        i {
+                            color: $primary;
+                        }
+                    }
+
+                }
+
+                .regulation-list-item-cnt {
+                    .regulation-list-item-tag {
+                        background-color: lighten($primary, 30%);
+                        color: darken($primary, 30%);
+                    }
+
+                    .regulation-list-item-txt {
+                        color: $dark;
+                    }
+                }
+
+               
+            }
+
+            &.secondary-item {
+                &:hover {
+                    background-color: lighten($secondary, 38%);
+
+                    .regulation-list-item-cnt {
+                        .regulation-list-item-tag {
+                            background-color: lighten($secondary, 0%);
+                            color: $white;
+                        }
+
+                        .regulation-list-item-date-tag {
+                            background-color: $white;
+                            color: $secondary;
+                        }
+
+                        .regulation-list-item-txt {
+                            color: $secondary;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .regulation-list-item-icon {
+                        i {
+                            color: $secondary;
+                        }
+                    }
+
+                    
+                }
+
+                .regulation-list-item-cnt {
+                    .regulation-list-item-tag {
+                        background-color: lighten($secondary, 30%);
+                        color: darken($secondary, 30%);
+                    }
+
+                    .regulation-list-item-txt {
+                        color: $dark;
+                    }
+                }
+
+                .badge-file-count {
+                    dt {
+                        background-color: $secondary;
+                    }
+
+                    dd {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            &.tertiary-item {
+                &:hover {
+                    background-color: lighten($tertiary, 46%);
+
+                    .regulation-list-item-cnt {
+                        .regulation-list-item-tag {
+                            background-color: lighten($tertiary, 0%);
+                            color: $white;
+                        }
+
+                        .regulation-list-item-date-tag {
+                            background-color: $white;
+                            color: $tertiary;
+                        }
+
+                        .regulation-list-item-txt {
+                            color: $tertiary;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .regulation-list-item-icon {
+                        i {
+                            color: $tertiary;
+                        }
+                    }
+
+                    
+                }
+
+                .regulation-list-item-cnt {
+                    .regulation-list-item-tag {
+                        background-color: lighten($tertiary, 40%);
+                        color: darken($tertiary, 30%);
+                    }
+
+                    .regulation-list-item-txt {
+                        color: $dark;
+                    }
+                }
+
+                .badge-file-count {
+                    dt {
+                        background-color: $tertiary;
+                    }
+
+                    dd {
+                        color: $tertiary;
+                    }
+                }
+            }
+            &.quaternary-item {
+                &:hover {
+                    background-color: lighten($quaternary, 26%);
+
+                    .regulation-list-item-cnt {
+                        .regulation-list-item-tag {
+                            background-color: lighten($quaternary, 0%);
+                            color: $white;
+                        }
+
+                        .regulation-list-item-date-tag {
+                            background-color: $white;
+                            color: $quaternary;
+                        }
+
+                        .regulation-list-item-txt {
+                            color: $quaternary;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .regulation-list-item-icon {
+                        i {
+                            color: $quaternary;
+                        }
+                    }
+
+        
+                }
+
+                .regulation-list-item-cnt {
+                    .regulation-list-item-tag {
+                        background-color: lighten($quaternary, 30%);
+                        color: darken($quaternary, 20%);
+                    }
+
+                    .regulation-list-item-txt {
+                        color: $dark;
+                    }
+                }
+
+                .badge-file-count {
+                    dt {
+                        background-color: $quaternary;
+                    }
+
+                    dd {
+                        color: $quaternary;
+                    }
+                }
+            }
+
+            .regulation-list-item-cnt {
+                @include in-bk-mid;
+
+                // padding-left: 1.5rem;
+                padding-right: 3rem;
+                width: calc(100%);
+
+                .regulation-list-item-tag {
+                    @include in-bk-mid;
+
+                    border-radius: 4rem;
+                    color: $white;
+                    font-size: .875rem;
+                    padding: .375rem 2rem;
+                    margin-right: 0.5rem;
+                    user-select: none;
+                }
+
+                .regulation-list-item-date-tag {
+                    @include in-bk-mid;
+
+                    border-radius: 2rem;
+                    font-size: .875rem;
+                    padding: 0.375rem 1rem;
+                    margin-right: 0.5rem;
+                    user-select: none;
+                    background-color: $light;
+                    color: $dark;
+
+                    i,
+                    font {
+                        vertical-align: middle;
+                    }
+                }
+
+                .regulation-list-item-txt {
+                    display: block;
+                    font-size: 1.125rem;
+                    font-weight: bolder;
+                    padding-left: .25rem;
+                    margin-top: .5rem;
+                }
+            }
+
+            .regulation-list-item-icon {
+                position: absolute;
+                right: .5rem;
+                top: 50%;
+                transform: translateY(-50%);
+
+                i {
+                    color: $grey;
+                    font-size: 2rem;
+                }
+            }
+
+            .regulation-label {
+                position: absolute;
+                right: 4.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4rem;
+                user-select: none;
+
+                img {}
+
+                .new-img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
+
+/*  REGULATION-LIST INNER
+----------------------------------------  */
+.regulation-inner {
+    background-color: $white;
+    padding: 2rem 0;
+
+    .regulation-inner-panel {
+
+        hr {
+            border-bottom: 2px solid lighten($tertiary, 30%);
+            margin: 1.5rem 0 1rem;
+        }
+    }
+
+    .page-sub-heading {
+        font-size: 1.625rem;
+        margin-top: 2.5rem;
+        padding-left: 1.5rem;
+
+        &:before{
+            content: '';
+            background-color: lighten($tertiary, 30%);
+            @include position-ab-y-center;
+            left: 0;
+            width: .75rem;
+            height: .75rem;
+            border-radius: 50%;
+        }
+    }
+
+    .page-tags {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        margin-top: 1.5rem;
+
+        .unit--tag,
+        .date--tag {
+            border-radius: 2rem;
+            font-size: 1rem;
+            padding: .375rem 1rem;
+            user-select: none;
+            @include in-bk-mid;
+        }
+
+        .unit--tag {
+            background-color: $tertiary;
+            color: $white;
+            margin-right: .5rem;
+        }
+
+        .date--tag {
+            background-color: $grey-100;
+            color: $dark;
+
+            i,font {
+                vertical-align: middle;
+            }
+
+        }
+    }
+
+    .page-txt-cnt {
+        font-size: 1.125rem;
+        line-height: 2;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+
+}
+
+
+
+

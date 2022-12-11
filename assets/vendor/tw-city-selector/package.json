@@ -1,0 +1,75 @@
+{
+  "_from": "tw-city-selector",
+  "_id": "tw-city-selector@2.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-m/JahEKiUOCvGiun6gQPizTWgew9U119K+8NuKoO4eM1TdHX3QjeyB1UoXQk4386dRkh+c7N583SIk8ji42IRQ==",
+  "_location": "/tw-city-selector",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "tw-city-selector",
+    "name": "tw-city-selector",
+    "escapedName": "tw-city-selector",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tw-city-selector/-/tw-city-selector-2.1.1.tgz",
+  "_shasum": "215768eefce00207a572541489d8fdd874bd2cb5",
+  "_spec": "tw-city-selector",
+  "_where": "/Users/turbotechdesign/JobAcmd",
+  "bugs": {
+    "url": "https://github.com/dennykuo/tw-city-selector/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "docsify": "^4.9",
+    "vue": "^2.5.16"
+  },
+  "deprecated": false,
+  "description": "### 文件：[https://dennykuo.github.io/tw-city-selector](https://dennykuo.github.io/tw-city-selector)",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "copy": "^0.3.2",
+    "css-loader": "^1.0.1",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.33",
+    "webpack-cli": "^3.3",
+    "webpack-dev-server": "^3.7",
+    "webpack-hot-middleware": "^2.25"
+  },
+  "files": [
+    "dist/",
+    "bower.json",
+    "docs/",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://dennykuo.github.io/tw-city-selector",
+  "license": "MIT",
+  "main": "dist/tw-city-selector.js",
+  "name": "tw-city-selector",
+  "repository": {
+    "url": "git+https://github.com/dennykuo/tw-city-selector.git",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "webpack",
+    "docs:vendor": "webpack --config=webpack.docs.config",
+    "start": "webpack-dev-server --open --content-base ./docs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "umd:test": "webpack --config=webpack.umd-test.config",
+    "watch": "webpack --watch"
+  },
+  "version": "2.1.1"
+}

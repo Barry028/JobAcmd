@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  MIXINS > BOX SHADOW
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+@mixin box-shadow($shadow...) {
+    @if $enable-shadows {
+        $result: ();
+
+        @if length($shadow) == 1 {
+            // We can pass `@include box-shadow(none);`
+            $result: $shadow;
+        }
+        @else {
+            // Filter to avoid invalid properties for example `box-shadow: none, 1px 1px black;`
+            @for $i from 1 through length($shadow) {
+                @if nth($shadow, $i) != "none" {
+                    $result: append($result, nth($shadow, $i), "comma");
+                }
+            }
+        }
+
+        @if length($result) > 0 {
+            box-shadow: $result;
+        }
+    }
+}
+
+@mixin shd-none {
+    box-shadow: none;
+}
+
+@mixin shd-paper {
+    content: '';
+    width: 50%;
+    max-width: 22rem;
+    box-shadow: 0 1rem 0.625rem rgba($black, 0.36);
+    z-index: -1;
+
+    @include absolute($T: 80%, $B: 1rem);
+}
+
+@mixin shd-paper-lt {
+    @include shd-paper;
+
+    left: .375rem;
+    transform: rotate(-3deg);
+}
+
+@mixin shd-paper-rt {
+    @include shd-paper;
+
+    right: .375rem;
+    transform: rotate(3deg);
+}
+
+@mixin shd--ver_1 {
+    box-shadow: $shd--ver_01;
+}
+
+@mixin shd--ver_2 {
+    box-shadow: $shd--ver_02;
+}
+
+@mixin shd--ver_3 {
+    box-shadow: $shd--ver_03;
+}
+
+@mixin shd--ver_4 {
+    box-shadow: $shd--ver_04;
+}
+
+@mixin shd--ver_5 {
+    box-shadow: $shd--ver_05;
+}
+
+@mixin shd--ver_6 {
+    box-shadow: $shd--ver_06;
+}
+
+@mixin shd--ver_7 {
+    box-shadow: $shd--ver_07;
+}
+
+@mixin shd--ver_8 {
+    box-shadow: $shd--ver_08;
+}
+
+@mixin shd--ver_9 {
+    box-shadow: $shd--ver_09;
+}
+
+@mixin shd--ver_10 {
+    box-shadow: $shd--ver_10;
+}
+
+@mixin shd--ver_11 {
+    box-shadow: $shd--ver_11;
+}
+
+@mixin shd--ver_12 {
+    box-shadow: $shd--ver_12;
+}
+
+@mixin shd--ver_13 {
+    box-shadow: $shd--ver_13;
+}
+
+@mixin shd--ver_14 {
+    box-shadow: $shd--ver_14;
+}
+
+@mixin shd--ver_15 {
+    box-shadow: $shd--ver_15;
+}
+
+@mixin shd--ver_16 {
+    box-shadow: $shd--ver_16;
+}
+
+@mixin shd--ver_17 {
+    box-shadow: $shd--ver_17;
+}
+
+@mixin shd--ver_18 {
+    box-shadow: $shd--ver_18;
+}
+
+@mixin shd--hv--ver_1 {
+    box-shadow: $shd--hv--ver--01;
+
+    &:hover {
+        box-shadow: $shd--hv--ver--01--hv;
+    }
+}
+
+@mixin shd--hv--ver_2 {
+    box-shadow: $shd--hv--ver--02;
+
+    &:hover {
+        top: -2px;
+        box-shadow: $shd--hv--ver--02--hv;
+    }
+}
+
+@mixin shd--hv--ver_3 {
+    box-shadow: $shd--hv--ver--03;
+
+    &:hover {
+        box-shadow: $shd--hv--ver--03--hv;
+    }
+}
+
+@mixin shd--hv--ver_4 {
+    box-shadow: $shd--hv--ver--04;
+
+    &:hover {
+        box-shadow: $shd--hv--ver--04--hv;
+    }
+}
+
+@mixin shd--hv--ver_5 {
+    box-shadow: $shd--hv--ver--05;
+
+    &:hover {
+        box-shadow: $shd--hv--ver--05--hv;
+    }
+}

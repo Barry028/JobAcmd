@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  COMPONENTS > BUTTONS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn {
+    background-color: $grey-100;
+    border: 1px solid $default;
+    color: $dark;
+    cursor: pointer;
+    text-align: center;
+    
+    user-select: none;
+    white-space: nowrap;
+
+    @include in-bk-mid;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius-sm);
+    @include transition($btn-transition);
+
+    @include hover {
+        background-color: lighten($grey-100, 3%);
+        color: $grey-800;
+        text-decoration: none;
+    }
+
+
+    &:not(:disabled):not(.disabled):not(.btn--disabled):focus,
+    &:not(:disabled):not(.disabled):not(.btn--disabled).focus {
+        // background-color: darken($grey-100, 3%);
+        outline: 0;
+        box-shadow: 0 0 0 1px rgba(mix(color-yiq($grey-100), $grey-100, 15%), 0.5);
+    }
+
+    &.btn--disabled,
+    &.disabled,
+    &:disabled {
+        cursor: not-allowed;
+        opacity: $btn-disabled-opacity;
+
+        @include box-shadow(none);
+    }
+
+    &:not(:disabled):not(.disabled):not(.btn--disabled):active,
+    &:not(:disabled):not(.disabled):not(.btn--disabled).active {
+        // background-color: lighten($grey-100, 6%);
+
+        @include box-shadow($btn-active-box-shadow);
+
+        // &:focus:not(:disabled):not(.disabled):not(.btn--disabled) {
+        //   @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+   
+    }
+
+    span,
+    i {
+        font-size: inherit;
+        vertical-align: middle;
+    }
+
+    // Button Sizes
+    &.btn--lg {
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $border-radius-lg--px);
+    }
+
+    &.btn--md {
+        @include button-size($btn-padding-y-md, $btn-padding-x-md, $btn-font-size-md, $btn-line-height-md, $border-radius-md--px);
+    }
+
+    &.btn--sm {
+        @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $border-radius-sm--px);
+    }
+
+    &.btn--xs {
+        @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $border-radius-xs--px);
+    }
+
+    &.btn--xxs {
+        @include button-size($btn-padding-y-xxs, $btn-padding-x-xxs, $btn-font-size-xxs, $btn-line-height-xxs, $border-radius-xxs--px);
+    }
+
+    // Block Button
+    &.btn--block {
+        display: block;
+        width: 100%;
+
+        + .btn.btn-block {
+            margin-top: $btn-block-spacing-y;
+        }
+    }
+
+    &.btn--icon {
+        padding-left: 0;
+        padding-right: 0;
+        min-width: 12rem;
+        text-align-last: center;
+        font {
+            padding-right: 2.5rem;
+        }
+
+        i {
+            @include position-ab-y-center;
+
+            right: 0;
+            border-left: 1px solid rgba($white, 0.66);
+            display: block;
+            width: 2.5rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        &.btn--icon--xs {
+            min-width: 8rem;
+
+            font {
+                padding-right: 1.75rem;
+            }
+
+            i {
+                font-size: .875rem;
+                width: 1.75rem;
+            }
+        }
+
+        &.btn--icon--sm {
+            min-width: 8rem;
+
+            font {
+                padding-right: 2rem;
+            }
+
+            i {
+                font-size: .9375rem;
+                width: 2rem;
+            }
+        }
+
+        &.btn--icon--md {
+            min-width: 10rem;
+            max-width: 50%;
+            padding-left: 0;
+            padding-right: 0;
+
+            font {
+                padding-right: 3.5rem;
+            }
+
+            i {
+                font-size: 1.125rem;
+                width: 3.5rem;
+            }
+        }
+
+        &.btn--icon--lg {
+            min-width: 14rem;
+
+            @media all and (max-width: $screen-xs-min) {
+                min-width: 100%;
+                width: 100%;
+            }
+
+            font {
+                padding-right: 4.5rem;
+            }
+
+            i {
+                font-size: 1.5rem;
+                width: 4.5rem;
+                @media all and (max-width: $screen-xs-min) {
+                    width: auto;
+                }
+            }
+        }
+    }
+    &.btn--icon--lt {
+        padding-left: 0;
+        padding-right: 0;
+        min-width: 12rem;
+
+        font {
+            padding-left: 2.5rem;
+        }
+
+        i {
+            @include position-ab-y-center;
+
+            left: 0;
+            border-right: 1px solid rgba($white, 0.66);
+            display: block;
+            width: 2.5rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        &.btn--icon--xs {
+            min-width: 8rem;
+
+            font {
+                padding-left: 1.75rem;
+            }
+
+            i {
+                font-size: .875rem;
+                width: 1.75rem;
+            }
+        }
+
+        &.btn--icon--sm {
+            min-width: 8rem;
+
+            font {
+                padding-left: 2rem;
+            }
+
+            i {
+                font-size: .9375rem;
+                width: 2rem;
+            }
+        }
+
+        &.btn--icon--md {
+            min-width: 10rem;
+
+            font {
+                padding-left: 3.5rem;
+            }
+
+            i {
+                font-size: 1.125rem;
+                width: 3.5rem;
+            }
+        }
+
+        &.btn--icon--lg {
+            min-width: 14rem;
+
+            font {
+                padding-left: 4.5rem;
+            }
+
+            i {
+                font-size: 1.5rem;
+                width: 4.5rem;
+            }
+        }
+    }
+
+    // Square Buttons
+    &.btn--square {
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+
+        i {
+            font-size: 1rem;
+
+            @include position-ab-center;
+        }
+
+        &--sm {
+            border-radius: $border-radius-sm--px;
+            width: 2.375rem;
+            height: 2.375rem;
+            padding: 0;
+
+            i {
+                font-size: .9375rem;
+
+                @include position-ab-center;
+            }
+        }
+
+        &--md {
+            border-radius: $border-radius-md--px;
+            width: 3.6875rem;
+            height: 3.6875rem;
+            padding: 0;
+
+            i {
+                font-size: 1.25rem;
+
+                @include position-ab-center;
+            }
+        }
+
+        &--lg {
+            border-radius: $border-radius-lg--px;
+            width: 4.4375rem;
+            height: 4.4375rem;
+            padding: 0;
+
+            i {
+                font-size: 1.5rem;
+
+                @include position-ab-center;
+            }
+        }
+    }
+
+    i,
+    font {
+        vertical-align: middle;
+    }
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none;
+}
+
+.show > .btn.btn--border.dropdown-toggle {
+    color: $black;
+    background-color: lighten($black, 80%);
+    border-color: lighten($black, 75%);
+}
+
+// Buttons Colors
+@each $color, $value in $btn-colors {
+    .btn.btn--#{$color} {
+        @include button-variant($value, $value);
+    }
+}
+
+// Buttons Brand Colors
+@each $color, $value in $brand-colors {
+    .btn.btn--#{$color} {
+        @include button-variant($value, $value);
+    }
+}
+
+// Buttons Shadow Colors
+@each $color, $value in $btn-colors {
+    .btn.btn--shadow--#{$color} {
+        @include button-boxShadow-variant($value, $value);
+    }
+}
+
+// Buttons Border Colors
+@each $color, $value in $btn-colors {
+    .btn.btn--border--#{$color} {
+        @include button-outline-variant($value);
+    }
+}
+
+// Buttons inverse Colors
+@each $color, $value in $btn-colors {
+    .btn.btn--inverse--#{$color} {
+        @include button-inverse-variant($value);
+    }
+}
+
+// Buttons 3D Colors
+@each $color, $value in $btn-colors {
+    .btn.btn--3d--#{$color} {
+        @include button-3d-variant($value);
+    }
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn--block {
+        width: 100%;
+    }
+}
+
+.btn.btn--white {
+    color: $dark;
+
+    @include hover {
+        &:not(.btn--disabled) {
+            color: $primary;
+        }
+    }
+}
+
+.btn.btn--border--white,
+.btn.btn--inverse--white,
+.btn.btn--3d--white,
+.btn.btn--shadow--white {
+    border-color: $border-color;
+    color: $dark;
+
+    @include hover {
+        background-color: $primary;
+    }
+}

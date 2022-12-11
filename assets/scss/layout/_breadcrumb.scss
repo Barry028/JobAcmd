@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Layout > Breadcrumbs
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.breadcrumbs {
+    background-color: $default;
+    padding: 1rem 1.5rem;
+
+    @media all and (max-width: $screen-sm-min) {
+    	padding-left: 0;
+    	padding-right: 0;
+    }
+
+    ul {
+
+        li {
+            display: inline-block;
+            margin-right: 1.5rem;
+
+            i {
+            	color: $lightgrey;
+            	margin-right: .25rem;
+            }
+
+            &:not(:last-child):after {
+                content: '>';
+                position: absolute;
+                right: -1rem;
+                top: 0;
+            }
+
+            a {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}

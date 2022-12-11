@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'JobAcmd';
+  src:  url('fonts/JobAcmd.eot?sm7lzk');
+  src:  url('fonts/JobAcmd.eot?sm7lzk#iefix') format('embedded-opentype'),
+    url('fonts/JobAcmd.ttf?sm7lzk') format('truetype'),
+    url('fonts/JobAcmd.woff?sm7lzk') format('woff'),
+    url('fonts/JobAcmd.svg?sm7lzk#JobAcmd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ja-"], [class*=" ja-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'JobAcmd' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ja-font-big:before {
+  content: "\e900";
+}
+.ja-font-default:before {
+  content: "\e901";
+}
+.ja-font-small:before {
+  content: "\e902";
+}
+.ja-clock:before {
+  content: "\e903";
+}
+.ja-phone:before {
+  content: "\e904";
+}

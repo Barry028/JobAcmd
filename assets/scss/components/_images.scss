@@ -1,0 +1,66 @@
+@charset "utf-8";
+/**
+ * ==   Components > Images
+ */
+
+.img-container {
+  display: block;
+  width: 100%;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+  }
+
+  &.percent_1--1 {
+    &:before {
+      padding-top: 100%;
+    }
+  }
+
+  &.percent_2--1 {
+    &:before {
+      padding-top: 50%;
+    }
+  }
+
+  &.percent_3--1 {
+    &:before {
+      padding-top: 33%;
+    }
+  }
+
+  &.percent_4--1 {
+    &:before {
+      padding-top: 25%;
+    }
+  }
+
+  &.percent_5--1 {
+    &:before {
+      padding-top: 20%;
+    }
+  }
+
+  &.percent_16--9 {
+    &:before {
+      padding-top: 56.25%;
+    }
+  }
+
+  &.percent_36--1 {
+    &:before {
+      padding-top: 27.5%;
+    }
+  }
+
+  .image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include absolute($T: 0, $L: 0);
+    @include size($width: 100%);
+  }
+}

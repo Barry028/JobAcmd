@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Components > Cards
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+    background-color: $white;
+
+    @include border-radius(4px);
+
+    box-shadow: 0 2px 24px 0 rgba($black, 0.04);
+    transition: ease-in-out all 0.35s;
+}
+
+.card-point {
+    border: $grey-200 1px solid;
+    margin: 1.25rem 0 0 0;
+
+    &:hover{
+
+    	.mask_primary--24 {
+            opacity: 0;
+            transition: $transition-base;
+        }
+    }
+
+    a {
+    	display: block;
+    }
+
+    .img-container {
+        &:before {
+            padding-top: 50%;
+        }
+
+        .image {
+            border-radius: 4px 4px 0 0;
+        }
+
+        .btn-add-point {
+            @include absolute($T: 0.5rem, $R: 0.5rem);
+
+            @include size($width: 2rem);
+
+            border-radius: 50%;
+            border: none;
+            color: $lightgrey;
+            padding: 0;
+            z-index: 2;
+
+            i {
+                font-size: 1.125rem;
+
+                @include position-ab-center;
+            }
+
+            &.active,
+            &:hover {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+
+        .mask {
+            z-index: 1;
+        }
+    }
+
+    figcaption {
+        padding: 1rem;
+
+        .tag {
+            background-color: $primary;
+            color: $white;
+            font-size: .75rem;
+            padding: .125rem .5rem;
+
+            &:not(:last-of-type) {
+                margin-right: .25rem;
+            }
+        }
+
+        h6 {
+        	color: $black;
+            font-size: 1rem;
+            margin-top: .5rem;
+            height: 3rem;
+
+            @include text_ellipsis($line: 2, $lineHeight: 2);
+        }
+
+        .area-line {
+            margin-top: .5rem;
+            text-align: right;
+
+            i {
+                color: lighten($primary, 20%);
+                vertical-align: middle;
+            }
+
+            span {
+                color: $grey;
+                font-size: .75rem;
+                vertical-align: middle;
+            }
+        }
+    }
+}

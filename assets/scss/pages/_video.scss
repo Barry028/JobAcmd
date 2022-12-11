@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  PAGES > CASE ANALYSIS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*  CASE ANALYSIS LIST
+----------------------------------------  */
+.video-list-section {
+    background-color: $white;
+    padding: 0 0 2rem 0;
+
+    .filter-tools {
+        margin-bottom: 1rem;
+    }
+}
+
+.video-card {background-color: $white;
+    margin: 1rem .5rem;
+
+    &:hover {
+     box-shadow: 0 6px 28px rgba($dark, 0.24);
+        .video-card-video-container {
+            .video {
+                transform: scale(1.125);
+                transition: $transition-base;
+            }
+        }
+
+        .video-card-container {
+           
+            transition: $transition-base;
+        }
+    }
+
+    .video-card-video-container {
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &:before {
+            padding-top: 56.25%;
+        }
+
+        .video {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @include absolute($T: 0, $L: 0);
+            @include size($width: 100%);
+        }
+    }
+
+    .video-card-container {
+        border-radius: 4px;
+        padding: .75rem;
+
+        h6 {
+            color: $dark;
+        }
+    }
+
+    .card-date {
+        color: $lightgrey;
+        margin-top: .25rem;
+        text-align: right;
+
+        i {
+            font-size: 1rem;
+            margin-right: .5rem;
+            vertical-align: middle;
+        }
+
+        span {
+            font-size: 1rem;
+            vertical-align: middle;
+        }
+    }
+    .full-link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+}

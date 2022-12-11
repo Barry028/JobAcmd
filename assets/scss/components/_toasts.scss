@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Components > Toasts
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.toast {
+  border-radius: 8px;
+  color: $white;
+  font-size: 1rem;
+  min-width: 10rem;
+  max-width: 20rem;
+
+  padding: 1.5rem 1.75rem;
+  text-align: center;
+  user-select: none;
+
+  &.float-toast {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: $transition-input;
+    user-select: none;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+    z-index: 9999;
+  }
+
+  &.toast--success {
+    background-color: rgba(darken($success, 10%), 0.66);
+  }
+
+  &.toast--error {
+    background-color: rgba(darken($danger, 10%), 0.66);
+  }
+
+  &.toast--info {
+    background-color: rgba(darken($info, 10%), 0.66);
+  }
+
+  &.toast--alerts {
+    background-color: rgba(darken($alerts, 15%), 0.66);
+  }
+
+  &.toast--warning {
+    background-color: rgba(darken($warning, 15%), 0.66);
+  }
+
+  &.toast--help {
+    background-color: rgba(darken($primary, 10%), 0.66);
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px;
+    background-color: inherit;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    filter: blur(10px);
+  }
+
+  >i {
+    position: relative;
+    display: block;
+    font-size: 3.5rem;
+    margin-bottom: .75rem;
+  }
+
+  font {
+    position: relative;
+    font-size: 1.125rem;
+    color: $white;
+  }
+}

@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Components > rtTools
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.rt-fix-tools {
+  position: fixed;
+  right: 0;
+  top: 4rem;
+
+  // width: 4.5rem;
+  border: #EFF3F5 1px solid;
+  background-color: white;
+  color: #72828A;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 0 rgba(35, 49, 56, 0.08), 4px 4px 8px 0 rgba(35, 49, 56, 0.1), 6px 6px 12px 0 rgba(35, 49, 56, 0.12);
+  opacity: 1;
+  font-size: .75rem;
+  z-index: 99;
+
+  .rotate-ani {
+    display: block;
+    animation: rotate-icon 4s linear infinite normal;
+  }
+
+  @keyframes rotate-icon {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .dropdown-menu .dropdown-item:hover font {
+    color: $dark;
+  }
+
+  .dropdown-toggle:after {
+    display: none;
+  }
+
+  .icon_color_1 {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: $primary;
+    border-radius: 4px;
+  }
+
+  .icon_color_2 {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: $primary2;
+    border-radius: 4px;
+  }
+
+  .icon_color_3 {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: $primary3;
+    border-radius: 4px;
+  }
+
+  .icon_color_4 {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: $primary4;
+    border-radius: 4px;
+  }
+
+  .icon_color_5 {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: $primary5;
+    border-radius: 4px;
+  }
+}
+
+// @keyframes rotate-taichi {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+
+//     100% {
+//         transform: rotate(720deg);
+//     }
+// }
+
+.rt-fix-tools.df-tools--intro,
+.rt-fix-tools.df-tool {
+  padding: 1rem .25rem .75rem;
+  position: fixed;
+  right: 24px;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.rt-fix-tools.df-tool {
+  bottom: 144px;
+}
+
+.rt-fix-tools.df-tools--intro {
+  bottom: 232px;
+}
+
+.rt-fix-tools>i {
+  display: block;
+}
+
+.rt-fix-tools.df-tools--intro>i,
+.rt-fix-tools.df-tool>i {
+  font-size: 1.75rem;
+  color: $primary;
+  margin-bottom: .375rem;
+}
+
+.rt-fix-tools:hover {
+  box-shadow: 2px 2px 6px 0 rgba(35, 49, 56, 0.12), 4px 4px 10px 0 rgba(35, 49, 56, 0.16), 6px 6px 14px 0 rgba(35, 49, 56, 0.18);
+  opacity: 1;
+  transition: all .25s ease-in-out;
+}
+
+.go-to-top {
+  display: none;
+  padding: .5rem 1.25rem .375rem;
+  right: auto;
+  top: auto;
+
+  >i {
+    font-size: 1.75rem;
+    margin-bottom: .25rem;
+  }
+
+  >font {
+    font-size: .75rem;
+  }
+
+  &:hover,
+  &:focus:hover {
+    color: $primary;
+  }
+}

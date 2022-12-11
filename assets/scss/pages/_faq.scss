@@ -1,0 +1,404 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Pages > FAQ
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.faq-link-section {
+    background-color: $white;
+    padding: 0.5rem 1.5rem 2rem;
+
+    .faq-link-list {
+        padding: 2rem 0;
+
+        .accordion--item {
+            background-color: lighten($grey-100, 2%);
+            border: 1px solid transparent;
+            border-radius: 8px;
+
+            @include shd--hv--ver_1;
+
+            &.primary-item {
+                &:hover {
+                    background-color: lighten($primary, 38%);
+
+                    .item-tag {
+                        background-color: lighten($primary, 0%);
+                        color: $white;
+                    }
+
+                    dt {
+                        .icon-container {
+                            &.blob-bg-v1 {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ffbf78'/%3E%3Cstop offset='0.011' stop-color='%23ffbf78'/%3E%3Cstop offset='1' stop-color='%23ff9449'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='og_blob_1' d='M17.576-58.7c10.23,13.435,15.89,29.87,11.662,42.35C25.01-3.934,10.961,4.523-4.042,12.093-18.977,19.594-34.8,26.21-46.188,21.5-57.645,16.8-64.67.908-67.807-15.254s-2.455-32.53,5.8-45.556c8.32-12.957,24.074-22.505,39.35-22.1S7.415-72.063,17.576-58.7Z' transform='translate(69.536 82.919)' opacity='0.66' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");
+                            }
+
+                            font {
+                                color: lighten($primary, 38%);
+                            }
+                        }
+
+                        .txts {
+                            > font {
+                                color: darken($primary, 8%);
+                            }
+                        }
+
+                        > i {
+                            color: darken($primary, 16%);
+                        }
+                    }
+                }
+
+                &.click {
+                    background-color: lighten($primary, 38%);
+                    border: 1px solid lighten($primary, 34%);
+
+                    .item-tag {
+                        background-color: lighten($primary, 0%);
+                        color: $white;
+                    }
+
+                    dt {
+                        border-bottom: darken($primary, 8%) 3px solid;
+
+                        .icon-container {
+                            &.blob-bg-v1 {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.187' height='106'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.5' x2='.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ffbf78'/%3E%3Cstop offset='.011' stop-color='%23ffbf78'/%3E%3Cstop offset='1' stop-color='%23ff9449'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M17.576-58.7c10.23 13.435 15.89 29.87 11.662 42.35C25.01-3.934 10.961 4.523-4.042 12.093-18.977 19.594-34.8 26.21-46.188 21.5-57.645 16.8-64.67.908-67.807-15.254s-2.455-32.53 5.8-45.556c8.32-12.957 24.074-22.505 39.35-22.1S7.415-72.063 17.576-58.7z' transform='translate(69.536 82.919)' opacity='1' fill='url(%23a)'/%3E%3C/svg%3E");
+                            }
+                        }
+
+                        .txts {
+                            > font {
+                                color: darken($primary, 16%);
+                            }
+                        }
+
+                        > i {
+                            color: darken($primary, 16%);
+                        }
+                    }
+                }
+
+                dt {
+                    .item-tag {
+                        background-color: lighten($primary, 30%);
+                        color: darken($primary, 30%);
+                        transition: $transition-base;
+                    }
+
+                    .icon-container {
+                        font {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+
+            &.secondary-item {
+                &:hover {
+                    background-color: lighten($secondary, 38%);
+
+                    .item-tag {
+                        background-color: lighten($secondary, 0%);
+                        color: $white;
+                    }
+
+                    dt {
+                        .icon-container {
+                            &.blob-bg-v1 {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2351cf66'/%3E%3Cstop offset='1' stop-color='%232da741'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='gn_blob_1' d='M17.576-58.7c10.23,13.435,15.89,29.87,11.662,42.35C25.01-3.934,10.961,4.523-4.042,12.093-18.977,19.594-34.8,26.21-46.188,21.5-57.645,16.8-64.67.908-67.807-15.254s-2.455-32.53,5.8-45.556c8.32-12.957,24.074-22.505,39.35-22.1S7.415-72.063,17.576-58.7Z' transform='translate(69.536 82.919)' opacity='0.66' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");
+                            }
+
+                            font {
+                                color: lighten($secondary, 38%);
+                            }
+                        }
+
+                        .txts {
+                            > font {
+                                color: darken($primary, 8%);
+                            }
+                        }
+
+                        > i {
+                            color: darken($secondary, 16%);
+                        }
+                    }
+                }
+
+                &.click {
+                    background-color: lighten($secondary, 38%);
+                    border: 1px solid lighten($secondary, 34%);
+
+                    .item-tag {
+                        background-color: lighten($secondary, 0%);
+                        color: $white;
+                    }
+
+                    dt {
+                        border-bottom: darken($secondary, 8%) 3px solid;
+
+                        .icon-container {
+                            &.blob-bg-v1 {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2351cf66'/%3E%3Cstop offset='1' stop-color='%232da741'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='gn_blob_1' d='M17.576-58.7c10.23,13.435,15.89,29.87,11.662,42.35C25.01-3.934,10.961,4.523-4.042,12.093-18.977,19.594-34.8,26.21-46.188,21.5-57.645,16.8-64.67.908-67.807-15.254s-2.455-32.53,5.8-45.556c8.32-12.957,24.074-22.505,39.35-22.1S7.415-72.063,17.576-58.7Z' transform='translate(69.536 82.919)' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");
+                            }
+                        }
+
+                        .txts {
+                            > font {
+                                color: darken($secondary, 16%);
+                            }
+                        }
+
+                        > i {
+                            color: darken($secondary, 16%);
+                        }
+                    }
+                }
+
+                dt {
+                    .item-tag {
+                        background-color: lighten($secondary, 30%);
+                        color: darken($secondary, 30%);
+                        transition: $transition-base;
+                    }
+
+                    .icon-container {
+                        font {
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+
+            &.tertiary-item {
+                &:hover {
+                    background-color: lighten($tertiary, 46%);
+
+                    .item-tag {
+                        background-color: lighten($tertiary, 0%);
+                        color: $white;
+                    }
+
+                    dt {
+                        .icon-container {
+                            &.blob-bg-v1 {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2322b8cf'/%3E%3Cstop offset='1' stop-color='%2366d9e8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='tl_blob_1' d='M17.576-58.7c10.23,13.435,15.89,29.87,11.662,42.35C25.01-3.934,10.961,4.523-4.042,12.093-18.977,19.594-34.8,26.21-46.188,21.5-57.645,16.8-64.67.908-67.807-15.254s-2.455-32.53,5.8-45.556c8.32-12.957,24.074-22.505,39.35-22.1S7.415-72.063,17.576-58.7Z' transform='translate(69.536 82.918)' opacity='0.66' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");
+                            }
+
+                            font {
+                                color: lighten($tertiary, 38%);
+                            }
+                        }
+
+                        .txts {
+                            > font {
+                                color: darken($tertiary, 8%);
+                            }
+                        }
+
+                        > i {
+                            color: darken($tertiary, 16%);
+                        }
+                    }
+                }
+
+                &.click {
+                    background-color: lighten($tertiary, 46%);
+                    border: 1px solid lighten($tertiary, 34%);
+
+                    .item-tag {
+                        background-color: lighten($tertiary, 0);
+                         color: $white;
+                    }
+
+                    dt {
+                        border-bottom: darken($tertiary, 8%) 3px solid;
+
+                        .icon-container {
+                            &.blob-bg-v1 {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2322b8cf'/%3E%3Cstop offset='1' stop-color='%2366d9e8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='tl_blob_1' d='M17.576-58.7c10.23,13.435,15.89,29.87,11.662,42.35C25.01-3.934,10.961,4.523-4.042,12.093-18.977,19.594-34.8,26.21-46.188,21.5-57.645,16.8-64.67.908-67.807-15.254s-2.455-32.53,5.8-45.556c8.32-12.957,24.074-22.505,39.35-22.1S7.415-72.063,17.576-58.7Z' transform='translate(69.536 82.918)' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");
+                            }
+                        }
+
+                        .txts {
+                            > font {
+                                color: darken($tertiary, 16%);
+                            }
+                        }
+
+                        > i {
+                            color: darken($tertiary, 16%);
+                        }
+                    }
+                }
+
+                dt {
+                    .item-tag {
+                        background-color: lighten($tertiary, 46%);
+                        color: darken($tertiary, 30%);
+                        transition: $transition-base;
+                    }
+
+                    .icon-container {
+                        font {
+                            color: $tertiary;
+                        }
+                    }
+                }
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 1.5rem;
+            }
+
+            &.click {
+                box-shadow: $shd--ver_13;
+
+                dt {
+                    .icon-container {
+                        font {
+                            color: $white;
+                        }
+                    }
+
+                    .txts {
+                        > font {
+                            font-weight: bolder;
+                        }
+                    }
+                }
+
+                dd {
+                    padding: 1.25rem 1.5rem;
+
+                    @include opacity(1);
+
+                    max-height: 600px;
+                    height: 100%;
+                    visibility: visible;
+                }
+            }
+
+            dt {
+                display: table;
+                width: 100%;
+                border-radius: 8px 8px 0 0;
+                cursor: pointer;
+                padding: .75rem 3rem .75rem 1.5rem;
+                user-select: none;
+
+                .icon-container {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 3rem;
+                    height: 3rem;
+                    margin: auto;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: 50%;
+                    transition: all .25s ease-in-out;
+
+                    &.blob-bg-v1 {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cpath data-name='Path 241702' d='M87.112 24.219c10.23 13.435 15.89 29.87 11.662 42.35-4.228 12.416-18.277 20.873-33.28 28.443-14.935 7.501-30.758 14.117-42.146 9.407-11.457-4.7-18.482-20.592-21.619-36.754s-2.455-32.53 5.8-45.556C15.849 9.152 31.603-.396 46.879.009s30.072 10.847 40.233 24.21z' fill='%23fff'/%3E%3C/svg%3E");
+                    }
+
+                    font {
+                        @include position-ab-center;
+
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .item-tag {
+                    @include in-bk-mid;
+
+                    border-radius: 4rem;
+                    color: $white;
+                    font-size: .875rem;
+                    padding: .375rem 2rem;
+                    margin-right: 0.5rem;
+                    user-select: none;
+                }
+
+                .txts {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: .75rem;
+
+                    > font {
+                        @include in-bk-mid;
+
+                        color: $dark;
+                        font-size: 1.25rem;
+                        font-weight: normal;
+                    }
+                }
+
+                > i {
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            dd {
+                background-color: $white;
+                border-radius: 0 0 8px 8px;
+                margin: 0;
+                line-height: 1.75;
+
+                @include opacity(0);
+
+                height: 0;
+                max-height: 0;
+                visibility: hidden;
+                transition: max-height .125s ease-in-out, height .125s ease-in-out, opacity .125s ease-in-out, visibility 0s;
+
+                p {
+                    &:not(:last-child) {
+                        margin-bottom: .5rem;
+                    }
+                }
+
+                // ul {
+                //     li {
+                //         padding: .25rem 0;
+
+                //         &:not(:first-child) {
+                //             margin-top: .75rem;
+                //         }
+
+                //         a {
+                //             font-size: 1rem;
+
+                //             i {
+                //                 color: lighten($primary, 10%);
+                //                 font-size: 1.5rem;
+                //                 vertical-align: middle;
+                //                 margin-right: .5rem;
+                //             }
+
+                //             font {
+                //                 font-size: 1rem;
+                //                 vertical-align: middle;
+
+                //                 &:hover {
+                //                     text-decoration: underline;
+                //                 }
+                //             }
+
+                //             &:hover {
+                //                 color: darken($primary, 10%);
+                //             }
+                //         }
+                //     }
+                // }
+           
+            }
+        }
+    }
+}

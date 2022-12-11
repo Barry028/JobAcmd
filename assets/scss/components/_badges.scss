@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Components > Badges
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.badge {
+    border-radius: $border-radius--px;
+    color: $white;
+    font-size: $font-size-xxs;
+    padding: .125rem .375rem;
+    transition: $transition-base;
+    user-select: none;
+
+    @each $color, $value in $colors {
+        &.badge--#{$color} {
+            @include badge-variant($value);
+        }
+    }
+
+    &.badge--rounded {
+        border-radius: 50%;
+    }
+}
+
+.item-tag {
+    &.primary-tag {
+        background-color: lighten($primary, 30%);
+        color: darken($primary, 30%);
+        border-radius: 4rem;
+        font-size: .875rem;
+        padding: .375rem 2rem;
+        margin-right: 0.5rem;
+        user-select: none;
+
+        @include in-bk-mid;
+    }
+
+    &.secondary-tag {
+        background-color: lighten($secondary, 30%);
+        color: darken($secondary, 30%);
+        border-radius: 4rem;
+        font-size: .875rem;
+        padding: .375rem 2rem;
+        margin-right: 0.5rem;
+        user-select: none;
+
+        @include in-bk-mid;
+    }
+
+    &.tertiary-tag {
+        background-color: lighten($tertiary, 40%);
+        color: darken($tertiary, 30%);
+        border-radius: 4rem;
+        font-size: .875rem;
+        padding: .375rem 2rem;
+        margin-right: 0.5rem;
+        user-select: none;
+
+        @include in-bk-mid;
+    }
+
+    &.quaternary-tag {
+        background-color: lighten($quaternary, 30%);
+        color: darken($quaternary, 20%);
+        border-radius: 4rem;
+        font-size: .875rem;
+        padding: .375rem 2rem;
+        margin-right: 0.5rem;
+        user-select: none;
+
+        @include in-bk-mid;
+    }
+}

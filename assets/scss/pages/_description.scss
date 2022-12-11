@@ -1,0 +1,507 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  PAGES > DESCRIPTION
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.description-inner-section {
+  background-color: $white;
+  padding: 2rem 0;
+}
+
+/*  ACMD TAB 業務專區 第一層
+----------------------------------------  */
+.acmd-tab {
+  .acmd-tab-navs {
+    &:after {
+      background-color: $primary;
+    }
+
+    .acmd-tab-nav {
+      &:hover {
+        background-color: lighten($primary, 15%);
+      }
+
+      .icon-container {
+        &.blob-bg-v1 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.187' height='106'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.5' x2='.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ffbf78'/%3E%3Cstop offset='.011' stop-color='%23ffbf78'/%3E%3Cstop offset='1' stop-color='%23ff9449'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M17.576-58.7c10.23 13.435 15.89 29.87 11.662 42.35C25.01-3.934 10.961 4.523-4.042 12.093-18.977 19.594-34.8 26.21-46.188 21.5-57.645 16.8-64.67.908-67.807-15.254s-2.455-32.53 5.8-45.556c8.32-12.957 24.074-22.505 39.35-22.1S7.415-72.063 17.576-58.7z' transform='translate(69.536 82.919)' opacity='.12' fill='url(%23a)'/%3E%3C/svg%3E");
+        }
+
+        &.blob-bg-v2 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='103.299' viewBox='0 0 112 103.299'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.5' x2='.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ffbf78'/%3E%3Cstop offset='.011' stop-color='%23ffbf78'/%3E%3Cstop offset='1' stop-color='%23ff9449'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath data-name='Path 171009' d='M22.727-50.692c9.218 12.265 11.427 29.482 7.694 45.175S17.09 24.27 4.063 30.136s-29.563 3.352-46.242-3.048S-75.775 10.481-79.2-3.232c-3.352-13.713 6.78-30.777 19.045-43.8s26.739-22.016 42.052-22.778c15.386-.69 31.612 6.776 40.83 19.118z' transform='translate(79.851 69.857)' opacity='.12' fill='url(%23a)'/%3E%3C/svg%3E");
+        }
+
+        &.blob-bg-v3 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='109' height='98.414' viewBox='0 0 109 98.414'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.5' x2='.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ffbf78'/%3E%3Cstop offset='.011' stop-color='%23ffbf78'/%3E%3Cstop offset='1' stop-color='%23ff9449'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath data-name='Path 171010' d='M40.961-40.106c7.306 12.095-.893 33.768-12.338 51.626S2.4 43.421-14.723 44.8s-36.609-9.822-45.213-26.057c-8.6-16.153-6.331-37.421 3.49-50.9 9.741-13.475 26.949-19.238 47-20.861 20.046-1.699 43.021.736 50.407 12.912z' transform='translate(65.269 53.498)' opacity='.12' fill='url(%23a)'/%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+
+  #acmd_disability:checked~.acmd-tab-navs #acmd_disability_tab,
+  #acmd_elderly:checked~.acmd-tab-navs #acmd_elderly_tab,
+  #acmd_trade:checked~.acmd-tab-navs #acmd_trade_tab {
+    background-color: $primary;
+    padding: 1.5rem 1rem;
+
+    @media all and (max-width: $screen-sm-min) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .title {
+      color: $white;
+    }
+
+    .icon-container {
+      &.blob-bg-v1 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cpath data-name='Path 241702' d='M87.112 24.219c10.23 13.435 15.89 29.87 11.662 42.35-4.228 12.416-18.277 20.873-33.28 28.443-14.935 7.501-30.758 14.117-42.146 9.407-11.457-4.7-18.482-20.592-21.619-36.754s-2.455-32.53 5.8-45.556C15.849 9.152 31.603-.396 46.879.009s30.072 10.847 40.233 24.21z' fill='%23fff'/%3E%3C/svg%3E");
+      }
+
+      &.blob-bg-v2 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='103.299' viewBox='0 0 112 103.299'%3E%3Cpath data-name='Path 241703' d='M102.578 19.165c9.218 12.265 11.427 29.482 7.694 45.175S96.941 94.127 83.914 99.993s-29.563 3.352-46.242-3.048S4.076 80.338.651 66.625c-3.352-13.713 6.78-30.777 19.045-43.8S46.435.809 61.748.047c15.386-.69 31.612 6.776 40.83 19.118z' fill='%23fff' opacity='.995'/%3E%3C/svg%3E");
+      }
+
+      &.blob-bg-v3 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='109' height='98.414' viewBox='0 0 109 98.414'%3E%3Cpath data-name='Path 241704' d='M106.23 13.392c7.306 12.095-.893 33.768-12.338 51.626s-26.223 31.901-43.346 33.28-36.609-9.822-45.213-26.057c-8.6-16.153-6.331-37.421 3.49-50.9C18.564 7.866 35.772 2.103 55.823.48c20.046-1.699 43.021.736 50.407 12.912z' fill='%23fff'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  #acmd_disability:checked~.acmd-tabs-contents #acmd_tabs_disability,
+  #acmd_elderly:checked~.acmd-tabs-contents #acmd_tabs_elderly,
+  #acmd_trade:checked~.acmd-tabs-contents #acmd_tabs_trade {
+    display: block;
+  }
+}
+
+/*  DISABILITY TAB 業務專區 身心障礙 第二層
+----------------------------------------  */
+.disability-tab {
+  .disability-tab-navs {
+    .disability-tab-nav {
+      background-color: lighten($sky, 40%);
+      border-color: lighten($sky, 35%);
+      color: $sky;
+
+      &:hover {
+        background-color: lighten($sky, 35%);
+      }
+    }
+  }
+
+  #disability_profile:checked~.disability-tab-navs #disability_profile_tab,
+  #disability_service:checked~.disability-tab-navs #disability_service_tab,
+  #disability_flow:checked~.disability-tab-navs #disability_flow_tab,
+  #disability_contact:checked~.disability-tab-navs #disability_contact_tab {
+    background-color: $sky;
+    color: $white;
+    font-weight: bolder;
+  }
+
+  #disability_profile:checked~.disability-tabs-contents #disability_profile_tabs,
+  #disability_service:checked~.disability-tabs-contents #disability_service_tabs,
+  #disability_flow:checked~.disability-tabs-contents #disability_flow_tabs,
+  #disability_contact:checked~.disability-tabs-contents #disability_contact_tabs {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+/*  ELDERLY TAB 業務專區 中高齡 第二層
+----------------------------------------  */
+.elderly-tab {
+  .elderly-tab-nav {
+    background-color: lighten($sky, 40%);
+    border-color: lighten($sky, 35%);
+    color: $sky;
+
+    &:hover {
+      background-color: lighten($sky, 35%);
+    }
+  }
+
+  #elderly_profile:checked~.elderly-tab-navs #elderly_profile_tab,
+  #elderly_service:checked~.elderly-tab-navs #elderly_service_tab,
+  #elderly_flow:checked~.elderly-tab-navs #elderly_flow_tab,
+  #elderly_contact:checked~.elderly-tab-navs #elderly_contact_tab {
+    background-color: $sky;
+    color: $white;
+
+    // padding: 1.5rem 1rem;
+
+  }
+
+  #elderly_profile:checked~.elderly-tabs-contents #elderly_profile_tabs,
+  #elderly_service:checked~.elderly-tabs-contents #elderly_service_tabs,
+  #elderly_flow:checked~.elderly-tabs-contents #elderly_flow_tabs,
+  #elderly_contact:checked~.elderly-tabs-contents #elderly_contact_tabs {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+/*  TRADE TAB 業務專區 因應貿易自由化就業協助對象專區 第二層
+----------------------------------------  */
+.trade-tab {
+  .trade-tab-nav {
+    background-color: lighten($sky, 40%);
+    border-color: lighten($sky, 35%);
+    color: $sky;
+
+    &:hover {
+      background-color: lighten($sky, 35%);
+    }
+  }
+
+  #trade_profile:checked~.trade-tab-navs #trade_profile_tab,
+  #trade_service:checked~.trade-tab-navs #trade_service_tab,
+  #trade_flow:checked~.trade-tab-navs #trade_flow_tab,
+  #trade_contact:checked~.trade-tab-navs #trade_contact_tab {
+    background-color: $sky;
+    color: $white;
+
+    // padding: 1.5rem 1rem;
+
+  }
+
+  #trade_profile:checked~.trade-tabs-contents #trade_profile_tabs,
+  #trade_service:checked~.trade-tabs-contents #trade_service_tabs,
+  #trade_flow:checked~.trade-tabs-contents #trade_flow_tabs,
+  #trade_contact:checked~.trade-tabs-contents #trade_contact_tabs {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+/*  CONTACT LIST
+----------------------------------------  */
+.contact-list {
+  padding: 0 0 2rem 0;
+
+  .contact-list-item {
+    background-color: $smoke;
+    border-radius: 4px;
+    font-size: 0;
+    line-height: 1.5;
+    padding: .75rem 1.25rem;
+    transition: $transition-base;
+
+    @media all and (max-width: $screen-md-min) {
+      padding: 1rem 1.25rem;
+    }
+
+    &:hover {
+      background-color: lighten($sky, 40%);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .contact-name {
+      font-size: 1.125rem;
+
+      @include in-bk-mid;
+
+      width: (100% / 3);
+
+      @media all and (max-width: $screen-md-min) {
+        margin-bottom: .5rem;
+        width: 100%;
+      }
+
+      h6 {
+        @include in-bk-mid;
+      }
+
+      .circle-icon {
+        @include in-bk-mid;
+
+        background-color: $sky;
+        border-radius: 2rem;
+        width: 2rem;
+        height: 2rem;
+        margin-right: .5rem;
+        vertical-align: middle;
+
+        i {
+          color: $white;
+
+          @include position-ab-center;
+        }
+      }
+    }
+
+    .contact-adress {
+      font-size: 1rem;
+
+      @include in-bk-mid;
+
+      width: (100% / 3);
+
+      @media all and (max-width: $screen-md-min) {
+        width: 50%;
+      }
+
+      @media all and (max-width: $screen-sm-min) {
+        margin-bottom: .5rem;
+        width: 100%;
+      }
+    }
+
+    .contact-phone {
+      font-size: 1rem;
+
+      @include in-bk-mid;
+
+      width: (100% / 3);
+
+      @media all and (max-width: $screen-md-min) {
+        width: 50%;
+      }
+
+      @media all and (max-width: $screen-sm-min) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.contain-set {
+  line-height: 1.75;
+
+  h6 {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+
+  dl {}
+
+  dd {}
+
+  dt {}
+
+  >ul {
+    li {}
+
+    ul {
+      margin-left: 1rem;
+
+      li {}
+    }
+  }
+}
+
+/*  IDENTITY TAB 業務專區  內頁
+----------------------------------------  */
+.identity-tab {
+  .identity-tab-navs {
+    &:after {
+      background-color: $border-color;
+    }
+
+    .identity-tab-nav {
+      &:hover {
+        background-color: lighten($secondary, 15%);
+      }
+
+      .icon-container {
+        &.blob-bg-v4 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.567' height='106' viewBox='0 0 100.567 106'%3E%3Cpath data-name='Path 171012' d='M88.76 18.198c10.756 12.826 14.481 31.993 9.859 48.057S80.97 95.212 65.941 101.486c-14.961 6.343-32.059 6.067-43.366-1.241S5.682 78.598 2.441 63.842s-4.137-29.853 2.9-41.781c7.032-12 21.925-20.752 38.333-21.925s34.262 5.24 45.086 18.062z' fill='%2369db7c' opacity='.12'/%3E%3C/svg%3E");
+        }
+
+        &.blob-bg-v5 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='93.492' height='106' viewBox='0 0 93.492 106'%3E%3Cpath data-name='Path 171013' d='M92.184 86.976c4.478-11.336-3.611-26.869-8.234-41.604S78.172 16.626 69.216 8.319C60.332.013 43.647-2.732 30.357 3.119c-13.218 5.85-23.041 20.3-27.591 36.836-4.55 16.612-3.973 35.392 5.417 47.815 9.39 12.5 27.591 18.707 45.143 18.2s34.452-7.654 38.858-18.994z' fill='%2369db7c' opacity='.12'/%3E%3C/svg%3E");
+        }
+
+        &.blob-bg-v6 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='106' height='91.491' viewBox='0 0 106 91.491'%3E%3Cpath data-name='Path 171015' d='M88.398 65.646c9.3-11.622 18.375-23.469 17.55-35.391-.9-11.922-11.7-23.844-24.069-28.193-12.447-4.424-26.469-1.125-42.44 4.2-15.9 5.4-33.742 12.9-38.241 25.419-4.5 12.595 4.274 30.286 16.271 42.513 12 12.3 27.293 19.12 39.74 16.871 12.373-2.325 21.895-13.722 31.189-25.419z' fill='%2369db7c' opacity='.12'/%3E%3C/svg%3E");
+        }
+
+        &.blob-bg-v7 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='93.492' height='106' viewBox='0 0 93.492 106'%3E%3Cpath data-name='Path 171014' d='M1.308 19.025c-4.478 11.34 3.611 26.869 8.234 41.6s5.778 28.747 14.735 37.053c8.884 8.306 25.569 11.051 38.859 5.2 13.217-5.847 23.04-20.292 27.593-36.832 4.55-16.612 3.973-35.392-5.417-47.815-9.39-12.5-27.591-18.707-45.143-18.2S5.714 7.685 1.308 19.025z' fill='%2369db7c' opacity='.12'/%3E%3C/svg%3E");
+        }
+
+        &.blob-bg-v8 {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='106.9' height='106' viewBox='0 0 106.9 106'%3E%3Cpath data-name='Path 171011' d='M101.127 91.766c7.573-9.137 6.83-25.353 2.717-39.593a70.113 70.113 0 0 0-25.353-36.88C64.992 4.925 45.731-3.717 31.079 1.633 16.51 6.983 6.55 26.409 2.269 46.658c-4.28 20.331-2.963 41.486 7.9 51.363 10.783 9.878 31.114 8.478 49.223 6.75 18.194-1.729 34.08-3.869 41.735-13.005z' fill='%2369db7c' opacity='.12'/%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+
+  #identity_Dementia:checked~.identity-tab-navs #identity_Dementia_tab,
+  #identity_Partnership:checked~.identity-tab-navs #identity_Partnership_tab,
+  #identity_Elderl_45:checked~.identity-tab-navs #identity_Elderl_45_tab,
+  #identity_Elderl_65:checked~.identity-tab-navs #identity_Elderl_65_tab,
+  #identity_Trade:checked~.identity-tab-navs #identity_Trade_tab {
+    background-color: $secondary;
+    padding: 1.5rem 1rem;
+
+    @media all and (max-width: $screen-md-min) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .title {
+      color: $white;
+    }
+
+    .icon-container {
+      &.blob-bg-v4 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.567' height='106' viewBox='0 0 100.567 106'%3E%3Cpath data-name='Path 241705' d='M88.76 18.198c10.756 12.826 14.481 31.993 9.859 48.057S80.97 95.212 65.941 101.486c-14.961 6.343-32.059 6.067-43.366-1.241S5.682 78.598 2.441 63.842s-4.137-29.853 2.9-41.781c7.032-12 21.925-20.752 38.333-21.925s34.262 5.24 45.086 18.062z' fill='%23fff'/%3E%3C/svg%3E");
+      }
+
+      &.blob-bg-v5 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='93.492' height='106' viewBox='0 0 93.492 106'%3E%3Cpath data-name='Path 241706' d='M92.184 86.976c4.478-11.336-3.611-26.869-8.234-41.604S78.172 16.626 69.216 8.319C60.332.013 43.647-2.732 30.357 3.119c-13.218 5.85-23.041 20.3-27.591 36.836-4.55 16.612-3.973 35.392 5.417 47.815 9.39 12.5 27.591 18.707 45.143 18.2s34.452-7.654 38.858-18.994z' fill='%23fff'/%3E%3C/svg%3E");
+      }
+
+      &.blob-bg-v6 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='106' height='91.491' viewBox='0 0 106 91.491'%3E%3Cpath data-name='Path 241707' d='M88.398 65.646c9.3-11.622 18.375-23.469 17.55-35.391-.9-11.922-11.7-23.844-24.069-28.193-12.447-4.424-26.469-1.125-42.44 4.2-15.9 5.4-33.742 12.9-38.241 25.419-4.5 12.595 4.274 30.286 16.271 42.513 12 12.3 27.293 19.12 39.74 16.871 12.373-2.325 21.895-13.722 31.189-25.419z' fill='%23fff'/%3E%3C/svg%3E");
+      }
+
+      &.blob-bg-v7 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='93.492' height='106' viewBox='0 0 93.492 106'%3E%3Cpath data-name='Path 241708' d='M1.308 19.025c-4.478 11.34 3.611 26.869 8.234 41.6s5.778 28.747 14.735 37.053c8.884 8.306 25.569 11.051 38.859 5.2 13.217-5.847 23.04-20.292 27.593-36.832 4.55-16.612 3.973-35.392-5.417-47.815-9.39-12.5-27.591-18.707-45.143-18.2S5.714 7.685 1.308 19.025z' fill='%23fff'/%3E%3C/svg%3E");
+      }
+
+      &.blob-bg-v8 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='106.9' height='106' viewBox='0 0 106.9 106'%3E%3Cpath data-name='Path 241709' d='M101.127 91.766c7.573-9.137 6.83-25.353 2.717-39.593a70.113 70.113 0 0 0-25.353-36.88C64.992 4.925 45.731-3.717 31.079 1.633 16.51 6.983 6.55 26.409 2.269 46.658c-4.28 20.331-2.963 41.486 7.9 51.363 10.783 9.878 31.114 8.478 49.223 6.75 18.194-1.729 34.08-3.869 41.735-13.005z' fill='%23fff'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  #identity_Dementia:checked~.identity-tabs-contents #identity_tabs_Dementia,
+  #identity_Partnership:checked~.identity-tabs-contents #identity_tabs_Partnership,
+  #identity_Elderl_45:checked~.identity-tabs-contents #identity_tabs_Elderl_45,
+  #identity_Elderl_65:checked~.identity-tabs-contents #identity_tabs_Elderl_65,
+  #identity_Trade:checked~.identity-tabs-contents #identity_tabs_Trade {
+    display: block;
+  }
+}
+
+/*  ASIDE FORM 
+----------------------------------------  */
+.aside-form {
+  .accordion-item {
+    font-size: 0;
+    margin-bottom: .5rem;
+    border-bottom: $border-color 1px dashed;
+
+    &.click {
+      dd {
+        @include opacity(0);
+
+        max-height: 0;
+        padding: 0;
+        height: 0;
+        visibility: hidden;
+      }
+    }
+
+    dt {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      width: 10rem;
+      margin-bottom: .5rem;
+      padding: .75rem 0;
+      background-color: lighten($primary, 38%);
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+
+      h5 {
+        @include in-bk-mid;
+
+        font-size: 1.25rem;
+      }
+
+      i {
+        @include in-bk-mid;
+
+        font-size: 1.5rem;
+        color: $primary;
+        margin-right: .5rem;
+      }
+    }
+
+    dd {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 1.75;
+
+      @include opacity(1);
+
+      padding: .75rem 1.5rem;
+      max-height: 2000px;
+      height: 100%;
+      width: calc(100% - 10rem);
+      visibility: visible;
+      transition: max-height .125s ease-in-out, height .125s ease-in-out, opacity .125s ease-in-out;
+
+      // background-color: lighten($warning , 47.5%);
+      @media all and (max-width: $screen-sm-min) {
+        width: 100%;
+      }
+
+
+      h6 {
+        display: inline-block;
+        font-size: 1.5rem;
+      }
+
+      > ul {
+            font-size: 1.125rem;
+            margin-top: .75rem;
+            margin-bottom: .75rem;
+        li {
+
+        }
+
+        ul {
+
+            font-size: 1rem;
+            margin-top: .5rem;
+            margin-left: 1rem;
+
+          li {
+            color: $grey;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .btn-row {
+    font-size: 0;
+    padding: 2rem 0;
+    text-align: center;
+
+    .btn {
+      width: 15rem;
+      border-width: 2px;
+      border-radius: 4rem;
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+
+      i {
+        background-color: $white;
+        box-shadow: 2px 2px 8px rgba($dark, 0.16);
+        border-radius: 50%;
+        font-size: 2rem;
+        margin-left: .5rem;
+        padding: .75rem;
+      }
+
+      span {
+        margin-left: 2rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: .5rem;
+      }
+    }
+  }
+}

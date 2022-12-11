@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  PAGES > RELATED_LINKS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.related-link-section {
+    background-color: $white;
+    padding: 2rem 0;
+
+    .related-link-list {
+        padding: 2rem 0;
+
+        .accordion--item {
+            background-color: lighten($grey-100, 2%);
+            border: 1px solid transparent;
+            border-radius: 8px;
+
+            @include shd--hv--ver_1;
+
+            // margin-top: .5rem;
+
+            &:not(:last-of-type) {
+                margin-bottom: 1.5rem;
+            }
+
+            &:hover {
+                background-color: lighten($primary, 38%);
+
+                // box-shadow: 0 6px 10px -6px rgba($dark, 0.1);
+
+                dt {
+                    .icon-container {
+                        &.blob-bg-v1 {
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ffbf78'/%3E%3Cstop offset='0.011' stop-color='%23ffbf78'/%3E%3Cstop offset='1' stop-color='%23ff9449'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='og_blob_1' d='M17.576-58.7c10.23,13.435,15.89,29.87,11.662,42.35C25.01-3.934,10.961,4.523-4.042,12.093-18.977,19.594-34.8,26.21-46.188,21.5-57.645,16.8-64.67.908-67.807-15.254s-2.455-32.53,5.8-45.556c8.32-12.957,24.074-22.505,39.35-22.1S7.415-72.063,17.576-58.7Z' transform='translate(69.536 82.919)' opacity='0.66' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");
+                        }
+
+                        i {
+                            color: lighten($primary, 38%);
+                        }
+                    }
+
+                    > strong {
+                        color: darken($primary, 8%);
+                    }
+
+                    > font {
+                        color: darken($primary, 8%);
+                    }
+
+                    > i {
+                        color: darken($primary, 16%);
+                    }
+                }
+
+                // dd {
+                //     a {
+                //         font {
+                //             text-decoration: underline;
+                //         }
+
+                //     }
+                // }
+           
+            }
+
+            &.click {
+                background-color: lighten($primary, 38%);
+                border: 1px solid lighten($primary, 34%);
+                box-shadow: $shd--ver_13;
+
+                dt {
+                    border-bottom: darken($primary, 8%) 3px solid;
+
+                    .icon-container {
+                        &.blob-bg-v1 {
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.187' height='106'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.5' x2='.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ffbf78'/%3E%3Cstop offset='.011' stop-color='%23ffbf78'/%3E%3Cstop offset='1' stop-color='%23ff9449'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M17.576-58.7c10.23 13.435 15.89 29.87 11.662 42.35C25.01-3.934 10.961 4.523-4.042 12.093-18.977 19.594-34.8 26.21-46.188 21.5-57.645 16.8-64.67.908-67.807-15.254s-2.455-32.53 5.8-45.556c8.32-12.957 24.074-22.505 39.35-22.1S7.415-72.063 17.576-58.7z' transform='translate(69.536 82.919)' opacity='1' fill='url(%23a)'/%3E%3C/svg%3E");
+                        }
+
+                        i {
+                            color: $white;
+                        }
+                    }
+
+                    > strong {
+                        color: darken($primary, 8%);
+                    }
+
+                    > font {
+                        color: darken($primary, 16%);
+                        font-weight: bolder;
+                    }
+
+                    > i {
+                        color: darken($primary, 16%);
+                    }
+                }
+
+                dd {
+                    padding: 1.25rem 1.5rem;
+
+                    @include opacity(1);
+                    display: block;
+
+                    height: 100%;
+                    visibility: visible;
+                    overflow: hidden;
+                    transition: max-height .125s ease-in-out,height .125s ease-in-out, opacity .125s ease-in-out, visibility .125s ease-in-out;
+                }
+            }
+
+            dt {
+                display: table;
+                width: 100%;
+                border-radius: 8px 8px 0 0;
+                cursor: pointer;
+                padding: .75rem 3rem .75rem 1.5rem;
+                user-select: none;
+
+                .icon-container {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 3rem;
+                    height: 3rem;
+                    margin: auto;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: 50%;
+                    transition: all .25s ease-in-out;
+
+                    &.blob-bg-v1 {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100.187' height='106' viewBox='0 0 100.187 106'%3E%3Cpath data-name='Path 241702' d='M87.112 24.219c10.23 13.435 15.89 29.87 11.662 42.35-4.228 12.416-18.277 20.873-33.28 28.443-14.935 7.501-30.758 14.117-42.146 9.407-11.457-4.7-18.482-20.592-21.619-36.754s-2.455-32.53 5.8-45.556C15.849 9.152 31.603-.396 46.879.009s30.072 10.847 40.233 24.21z' fill='%23fff'/%3E%3C/svg%3E");
+                    }
+
+                    i {
+                        @include position-ab-center;
+
+                        font-size: 1.5rem;
+                        color: $primary;
+                    }
+                }
+
+                > strong {
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-size: 2rem;
+                    color: darken($primary, 10%);
+
+                    @include opacity(0.66);
+
+                    margin-right: .5rem;
+                    width: 3rem;
+                    padding-left: .75rem;
+                }
+
+                > font {
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: $dark;
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                    padding-left: .75rem;
+                }
+
+                > i {
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            dd {
+                display: none;
+                border-radius: 0 0 8px 8px;
+                margin: 0;
+
+                @include opacity(0);
+
+                background-color: $white;
+                height: 0;
+
+
+
+                ul {
+                    li {
+                        padding: .25rem 0;
+
+                        &:not(:first-child) {
+                            margin-top: .75rem;
+                        }
+
+                        a {
+                            font-size: 1rem;
+
+                            i {
+                                color: lighten($primary, 10%);
+                                font-size: 1.5rem;
+                                vertical-align: middle;
+                                margin-right: .5rem;
+                            }
+
+                            font {
+                                font-size: 1rem;
+                                vertical-align: middle;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            &:hover {
+                                color: darken($primary, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

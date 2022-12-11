@@ -1,0 +1,528 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  PAGES > DOWNLOAD_LIST
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*  DOWNLOAD-LIST
+----------------------------------------  */
+.download-list-section {
+    background-color: $white;
+    padding: .5rem 1.5rem 2rem;
+
+    .download-list {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .download-list-item {
+            background-color: $grey-100;
+            border-radius: 4px;
+            font-size: 0;
+            padding: 1rem 1.75rem;
+            margin-bottom: .75rem;
+
+            &:hover {
+                .download-list-item-files {
+                    // .flaticon-049-gif {
+                    //     color: #76E7FC;
+                    // }
+
+                    // .flaticon-052-png {
+                    //     color: #B35324;
+                    // }
+                    .flaticon-066-pdf,
+                    .flaticon-056-zip {
+                        color: darken(#FF415B, 20%);
+                    }
+
+                    .flaticon-049-gif,
+                    .flaticon-052-png,
+                    .flaticon-063-jpg {
+                        color: darken(#20CA78, 20%);
+                    }
+
+                    // .flaticon-066-pdf,
+                    .flaticon-137-odt,
+                    .flaticon-064-doc {
+                        color: darken(#6680FF, 20%);
+                    }
+                }
+            }
+
+            @include shd--hv--ver_1;
+
+            * {
+                transition: $transition-base;
+            }
+
+            a {
+                display: block;
+            }
+
+            &.primary-item {
+                &:hover {
+                    background-color: lighten($primary, 38%);
+
+                    .download-list-item-cnt {
+                        .download-list-item-tag {
+                            background-color: lighten($primary, 0%);
+                            color: $white;
+                        }
+
+                        .download-list-item-date-tag {
+                            background-color: $white;
+                            color: $primary;
+                        }
+
+                        .download-list-item-txt {
+                            color: $primary;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .download-list-item-icon {
+                        i {
+                            color: $primary;
+                        }
+                    }
+
+                    .badge-file-count {
+                        @include opacity(0.66);
+
+                        // dt {
+                        //     // background-color: $white;
+                        //     // color: $primary;
+                        // }
+
+                        // dd {
+                        //     // background-color: lighten($primary,30%);
+                        //     // color: $white;
+                        // }
+                   
+                    }
+                }
+
+                .download-list-item-cnt {
+                    .download-list-item-tag {
+                        background-color: lighten($primary, 30%);
+                        color: darken($primary, 30%);
+                    }
+
+                    .download-list-item-txt {
+                        color: $dark;
+                    }
+                }
+
+                .badge-file-count {
+                    dt {
+                        background-color: $primary;
+                    }
+
+                    dd {
+                        color: $primary;
+                    }
+                }
+            }
+
+            &.secondary-item {
+                &:hover {
+                    background-color: lighten($secondary, 38%);
+
+                    .download-list-item-cnt {
+                        .download-list-item-tag {
+                            background-color: lighten($secondary, 0%);
+                            color: $white;
+                        }
+
+                        .download-list-item-date-tag {
+                            background-color: $white;
+                            color: $secondary;
+                        }
+
+                        .download-list-item-txt {
+                            color: $secondary;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .download-list-item-icon {
+                        i {
+                            color: $secondary;
+                        }
+                    }
+
+                    .badge-file-count {
+                        @include opacity(0.66);
+
+                        // dt {
+                        //     // background-color: $white;
+                        //     // color: $primary;
+                        // }
+
+                        // dd {
+                        //     // background-color: lighten($primary,30%);
+                        //     // color: $white;
+                        // }
+                   
+                    }
+                }
+
+                .download-list-item-cnt {
+                    .download-list-item-tag {
+                        background-color: lighten($secondary, 30%);
+                        color: darken($secondary, 30%);
+                    }
+
+                    .download-list-item-txt {
+                        color: $dark;
+                    }
+                }
+
+                .badge-file-count {
+                    dt {
+                        background-color: $secondary;
+                    }
+
+                    dd {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            &.tertiary-item {
+                &:hover {
+                    background-color: lighten($tertiary, 46%);
+
+                    .download-list-item-cnt {
+                        .download-list-item-tag {
+                            background-color: lighten($tertiary, 0%);
+                            color: $white;
+                        }
+
+                        .download-list-item-date-tag {
+                            background-color: $white;
+                            color: $tertiary;
+                        }
+
+                        .download-list-item-txt {
+                            color: $tertiary;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .download-list-item-icon {
+                        i {
+                            color: $tertiary;
+                        }
+                    }
+
+                    .badge-file-count {
+                        @include opacity(0.66);
+
+                        // dt {
+                        //     // background-color: $white;
+                        //     // color: $primary;
+                        // }
+
+                        // dd {
+                        //     // background-color: lighten($primary,30%);
+                        //     // color: $white;
+                        // }
+                   
+                    }
+                }
+
+                .download-list-item-cnt {
+                    .download-list-item-tag {
+                        background-color: lighten($tertiary, 40%);
+                        color: darken($tertiary, 30%);
+                    }
+
+                    .download-list-item-txt {
+                        color: $dark;
+                    }
+                }
+
+                .badge-file-count {
+                    dt {
+                        background-color: $tertiary;
+                    }
+
+                    dd {
+                        color: $tertiary;
+                    }
+                }
+            }
+
+            .badge-file-count {
+                background-color: $white;
+                border: rgba($dark, 0.12) 1px solid;
+                border-radius: 8px;
+                text-align: center;
+                user-select: none;
+                width: 4.5rem;
+
+                // position: absolute;
+                // right: 3.5rem;
+                // top: 50%;
+                // transform: translateY(-50%);
+                @include in-bk-mid;
+
+                dt {
+                    border-radius: 6px 6px 0 0;
+                    color: $white;
+                    font-size: .875rem;
+                    font-weight: bolder;
+                    padding: 0.5rem;
+                    text-shadow: 0 1px 1px rgba($dark, 0.16);
+                    width: 100%;
+                    letter-spacing: 1px;
+                }
+
+                dd {
+                    border-radius: 0 0 6px 6px;
+                    font-size: .875rem;
+                    width: 100%;
+                    text-shadow: 0 1px 1px rgba($dark, 0.08);
+                    letter-spacing: 1px;
+
+                    big {
+                        font-size: 125%;
+                        font-weight: bolder;
+                        padding: .125rem;
+                    }
+                }
+            }
+
+            .download-list-item-cnt {
+                @include in-bk-mid;
+
+                padding-left: 1.5rem;
+                padding-right: 3rem;
+                width: calc(100% - 4.5rem);
+
+                .download-list-item-tag {
+                    @include in-bk-mid;
+
+                    border-radius: 4rem;
+                    color: $white;
+                    font-size: .875rem;
+                    padding: .375rem 2rem;
+                    margin-right: 0.5rem;
+                    user-select: none;
+                }
+
+                .download-list-item-date-tag {
+                    @include in-bk-mid;
+
+                    border-radius: 2rem;
+                    font-size: .875rem;
+                    padding: 0.375rem 1rem;
+                    user-select: none;
+                    background-color: $light;
+                    color: $dark;
+
+                    i,
+                    font {
+                        vertical-align: middle;
+                    }
+                }
+
+                .download-list-item-txt {
+                    display: block;
+                    font-size: 1.125rem;
+                    font-weight: bolder;
+                    padding-left: .25rem;
+                    margin-top: .5rem;
+                }
+
+                .download-list-item-files {
+                    margin-top: .125rem;
+                    padding-left: .25rem;
+
+                    i {
+                        color: $grey-400;
+                        font-size: 1.5rem;
+                        margin-right: .25rem;
+
+                        &:before {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .download-list-item-icon {
+                position: absolute;
+                right: .5rem;
+                top: 50%;
+                transform: translateY(-50%);
+
+                i {
+                    color: $grey;
+                    font-size: 2rem;
+                }
+            }
+
+            .news-label {
+                position: absolute;
+                right: 4.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4rem;
+                user-select: none;
+
+                img {}
+
+                .new-img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
+
+/*  DOWNLOAD-LIST-INNER
+----------------------------------------  */
+.download-list-inner {
+    background-color: $white;
+    padding: 2rem 0;
+
+    .download-list-inner-panel {
+        hr {
+            border-bottom: 2px solid lighten($tertiary, 30%);
+            margin: 1.5rem 0 1rem;
+        }
+    }
+
+    .page-tags {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+
+        .date--tag {
+            border-radius: 2rem;
+            font-size: 1rem;
+            padding: .375rem 1rem;
+            user-select: none;
+
+            @include in-bk-mid;
+        }
+
+        .date--tag {
+            background-color: $grey-100;
+            color: $dark;
+
+            i, font {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .page-sub-heading {
+        font-size: 1.625rem;
+        margin-top: 1.25rem;
+    }
+
+    .page-txt-cnt {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .page-file-note {
+        padding: .25rem 1rem;
+
+        a {
+            &:hover {
+                color: darken($link, 20%);
+            }
+        }
+    }
+
+    .page-content {
+        margin-top: 1rem;
+        padding: 0 1rem 1rem;
+
+        .download-file-list {
+            font-size: 0;
+
+            .download-file-list-item {
+                @include in-bk-mid;
+
+                width: 49.5%;
+                user-select: none;
+                margin-bottom: .5rem;
+                margin-right: .5%;
+
+                @media all and (max-width: $screen-sm-min) {
+                    margin-right: 0;
+                    width: 100%;
+                }
+
+                a {
+                    background-color: $default;
+                    border-radius: 4px;
+                    display: block;
+                    padding: .5rem 1rem;
+
+                    &:hover {
+                        background-color: lighten($tertiary, 45%);
+
+                        .download-file-list-item-name {
+                            color: $tertiary;
+                            text-decoration: underline;
+                            transition: $transition-base;
+                        }
+                    }
+                }
+
+                .download-file-list-item-no {
+                    display: inline-block;
+                    vertical-align: baseline;
+                    color: $tertiary;
+                    font-size: 1.75rem;
+                    padding-right: .5rem;
+                    text-align: center;
+                    width: 4rem;
+                }
+
+                .download-file-list-item-name {
+                    display: inline-block;
+                    vertical-align: baseline;
+                    color: $dark;
+                    font-size: 1rem;
+                    font-family: $font-family-base;
+                    padding-right: .5rem;
+                    width: 50%;
+                }
+
+                .download-file-list-item-size {
+                    display: inline-block;
+                    vertical-align: baseline;
+                    color: $dark;
+                    font-size: 1rem;
+                    font-family: $font-family-base;
+                    padding-right: .5rem;
+                    width: 4rem;
+                }
+
+                .download-file-list-item-type {
+                    background-color: $white;
+                    border-radius: 50%;
+                    box-shadow: 2px 2px 2px rgba($dark, 0.16);
+                    color: $dark;
+                    padding: .5rem;
+                    position: absolute;
+                    right: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    .icon {
+                        font-size: 1.5rem;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

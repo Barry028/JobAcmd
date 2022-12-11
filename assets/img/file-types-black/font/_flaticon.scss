@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.fimanager:before {
+    display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-001-xlr:before { content: "\f100"; }
+.flaticon-002-odc:before { content: "\f101"; }
+.flaticon-003-pif:before { content: "\f102"; }
+.flaticon-004-fnt:before { content: "\f103"; }
+.flaticon-005-sdf:before { content: "\f104"; }
+.flaticon-006-vcd:before { content: "\f105"; }
+.flaticon-007-yuv:before { content: "\f106"; }
+.flaticon-008-gam:before { content: "\f107"; }
+.flaticon-009-pkg:before { content: "\f108"; }
+.flaticon-010-nes:before { content: "\f109"; }
+.flaticon-011-key:before { content: "\f10a"; }
+.flaticon-012-db:before { content: "\f10b"; }
+.flaticon-013-cdr:before { content: "\f10c"; }
+.flaticon-014-mov:before { content: "\f10d"; }
+.flaticon-015-app:before { content: "\f10e"; }
+.flaticon-016-raw:before { content: "\f10f"; }
+.flaticon-017-csr:before { content: "\f110"; }
+.flaticon-018-wav:before { content: "\f111"; }
+.flaticon-019-ps:before { content: "\f112"; }
+.flaticon-020-bat:before { content: "\f113"; }
+.flaticon-021-cur:before { content: "\f114"; }
+.flaticon-022-ico:before { content: "\f115"; }
+.flaticon-023-py:before { content: "\f116"; }
+.flaticon-024-apk:before { content: "\f117"; }
+.flaticon-025-uue:before { content: "\f118"; }
+.flaticon-026-iso:before { content: "\f119"; }
+.flaticon-027-bmp:before { content: "\f11a"; }
+.flaticon-028-js:before { content: "\f11b"; }
+.flaticon-029-dwg:before { content: "\f11c"; }
+.flaticon-030-avi:before { content: "\f11d"; }
+.flaticon-031-rtf:before { content: "\f11e"; }
+.flaticon-032-odx:before { content: "\f11f"; }
+.flaticon-033-exe:before { content: "\f120"; }
+.flaticon-034-drv:before { content: "\f121"; }
+.flaticon-035-bak:before { content: "\f122"; }
+.flaticon-036-rar:before { content: "\f123"; }
+.flaticon-037-pps:before { content: "\f124"; }
+.flaticon-038-pub:before { content: "\f125"; }
+.flaticon-039-tiff:before { content: "\f126"; }
+.flaticon-040-mp4:before { content: "\f127"; }
+.flaticon-041-css:before { content: "\f128"; }
+.flaticon-042-sql:before { content: "\f129"; }
+.flaticon-043-gz:before { content: "\f12a"; }
+.flaticon-044-cad:before { content: "\f12b"; }
+.flaticon-045-pptx:before { content: "\f12c"; }
+.flaticon-046-svg:before { content: "\f12d"; }
+.flaticon-047-mp3:before { content: "\f12e"; }
+.flaticon-048-ai:before { content: "\f12f"; }
+.flaticon-049-gif:before { content: "\f130"; }
+.flaticon-050-txt:before { content: "\f131"; }
+.flaticon-051-psd:before { content: "\f132"; }
+.flaticon-052-png:before { content: "\f133"; }
+.flaticon-053-ppt:before { content: "\f134"; }
+.flaticon-054-asf:before { content: "\f135"; }
+.flaticon-055-html:before { content: "\f136"; }
+.flaticon-056-zip:before { content: "\f137"; }
+.flaticon-057-log:before { content: "\f138"; }
+.flaticon-058-xls:before { content: "\f139"; }
+.flaticon-059-docx:before { content: "\f13a"; }
+.flaticon-060-csv:before { content: "\f13b"; }
+.flaticon-061-xml:before { content: "\f13c"; }
+.flaticon-062-xlsx:before { content: "\f13d"; }
+.flaticon-063-jpg:before { content: "\f13e"; }
+.flaticon-064-doc:before { content: "\f13f"; }
+.flaticon-065-fon:before { content: "\f140"; }
+.flaticon-066-pdf:before { content: "\f141"; }
+.flaticon-067-vob:before { content: "\f142"; }
+.flaticon-068-otf:before { content: "\f143"; }
+.flaticon-069-ra:before { content: "\f144"; }
+.flaticon-070-dtd:before { content: "\f145"; }
+.flaticon-071-pl:before { content: "\f146"; }
+.flaticon-072-wps:before { content: "\f147"; }
+.flaticon-073-odg:before { content: "\f148"; }
+.flaticon-074-pdb:before { content: "\f149"; }
+.flaticon-075-dmg:before { content: "\f14a"; }
+.flaticon-076-cer:before { content: "\f14b"; }
+.flaticon-077-wpd:before { content: "\f14c"; }
+.flaticon-078-rm:before { content: "\f14d"; }
+.flaticon-079-cab:before { content: "\f14e"; }
+.flaticon-080-tga:before { content: "\f14f"; }
+.flaticon-081-kmz:before { content: "\f150"; }
+.flaticon-082-icns:before { content: "\f151"; }
+.flaticon-083-mid:before { content: "\f152"; }
+.flaticon-084-rpm:before { content: "\f153"; }
+.flaticon-085-cfg:before { content: "\f154"; }
+.flaticon-086-dem:before { content: "\f155"; }
+.flaticon-087-aif:before { content: "\f156"; }
+.flaticon-088-cue:before { content: "\f157"; }
+.flaticon-089-elf:before { content: "\f158"; }
+.flaticon-090-otf:before { content: "\f159"; }
+.flaticon-091-m4a:before { content: "\f15a"; }
+.flaticon-092-m4v:before { content: "\f15b"; }
+.flaticon-093-odp:before { content: "\f15c"; }
+.flaticon-094-cpl:before { content: "\f15d"; }
+.flaticon-095-mdf:before { content: "\f15e"; }
+.flaticon-096-tmp:before { content: "\f15f"; }
+.flaticon-097-dxf:before { content: "\f160"; }
+.flaticon-098-cgi:before { content: "\f161"; }
+.flaticon-099-sys:before { content: "\f162"; }
+.flaticon-100-ics:before { content: "\f163"; }
+.flaticon-101-aac:before { content: "\f164"; }
+.flaticon-102-ogg:before { content: "\f165"; }
+.flaticon-103-odf:before { content: "\f166"; }
+.flaticon-104-m3u:before { content: "\f167"; }
+.flaticon-105-msg:before { content: "\f168"; }
+.flaticon-106-msi:before { content: "\f169"; }
+.flaticon-107-com:before { content: "\f16a"; }
+.flaticon-108-obj:before { content: "\f16b"; }
+.flaticon-109-dat:before { content: "\f16c"; }
+.flaticon-110-odt:before { content: "\f16d"; }
+.flaticon-111-dds:before { content: "\f16e"; }
+.flaticon-112-ttf:before { content: "\f16f"; }
+.flaticon-113-indd:before { content: "\f170"; }
+.flaticon-114-3gp:before { content: "\f171"; }
+.flaticon-115-tar:before { content: "\f172"; }
+.flaticon-116-lua:before { content: "\f173"; }
+.flaticon-117-fla:before { content: "\f174"; }
+.flaticon-118-vcf:before { content: "\f175"; }
+.flaticon-119-dmp:before { content: "\f176"; }
+.flaticon-120-gzip:before { content: "\f177"; }
+.flaticon-121-rom:before { content: "\f178"; }
+.flaticon-122-rss:before { content: "\f179"; }
+.flaticon-123-swf:before { content: "\f17a"; }
+.flaticon-124-wma:before { content: "\f17b"; }
+.flaticon-125-vb:before { content: "\f17c"; }
+.flaticon-126-3ds:before { content: "\f17d"; }
+.flaticon-127-jsp:before { content: "\f17e"; }
+.flaticon-128-kml:before { content: "\f17f"; }
+.flaticon-129-ods:before { content: "\f180"; }
+.flaticon-130-wmv:before { content: "\f181"; }
+.flaticon-131-dbf:before { content: "\f182"; }
+.flaticon-132-tex:before { content: "\f183"; }
+.flaticon-133-gpx:before { content: "\f184"; }
+.flaticon-134-dll:before { content: "\f185"; }
+.flaticon-135-odi:before { content: "\f186"; }
+.flaticon-136-ged:before { content: "\f187"; }
+.flaticon-137-odt:before { content: "\f188"; }
+.flaticon-138-asp:before { content: "\f189"; }
+.flaticon-139-lnk:before { content: "\f18a"; }
+.flaticon-140-flv:before { content: "\f18b"; }
+.flaticon-141-eps:before { content: "\f18c"; }
+.flaticon-142-bin:before { content: "\f18d"; }
+.flaticon-143-max:before { content: "\f18e"; }
+.flaticon-144-cpp:before { content: "\f18f"; }
+.flaticon-145-sav:before { content: "\f190"; }
+.flaticon-146-srt:before { content: "\f191"; }
+.flaticon-147-mpg:before { content: "\f192"; }
+.flaticon-148-jar:before { content: "\f193"; }
+.flaticon-149-7z:before { content: "\f194"; }
+.flaticon-150-mdb:before { content: "\f195"; }
+
+$font-Flaticon-001-xlr: "\f100";
+$font-Flaticon-002-odc: "\f101";
+$font-Flaticon-003-pif: "\f102";
+$font-Flaticon-004-fnt: "\f103";
+$font-Flaticon-005-sdf: "\f104";
+$font-Flaticon-006-vcd: "\f105";
+$font-Flaticon-007-yuv: "\f106";
+$font-Flaticon-008-gam: "\f107";
+$font-Flaticon-009-pkg: "\f108";
+$font-Flaticon-010-nes: "\f109";
+$font-Flaticon-011-key: "\f10a";
+$font-Flaticon-012-db: "\f10b";
+$font-Flaticon-013-cdr: "\f10c";
+$font-Flaticon-014-mov: "\f10d";
+$font-Flaticon-015-app: "\f10e";
+$font-Flaticon-016-raw: "\f10f";
+$font-Flaticon-017-csr: "\f110";
+$font-Flaticon-018-wav: "\f111";
+$font-Flaticon-019-ps: "\f112";
+$font-Flaticon-020-bat: "\f113";
+$font-Flaticon-021-cur: "\f114";
+$font-Flaticon-022-ico: "\f115";
+$font-Flaticon-023-py: "\f116";
+$font-Flaticon-024-apk: "\f117";
+$font-Flaticon-025-uue: "\f118";
+$font-Flaticon-026-iso: "\f119";
+$font-Flaticon-027-bmp: "\f11a";
+$font-Flaticon-028-js: "\f11b";
+$font-Flaticon-029-dwg: "\f11c";
+$font-Flaticon-030-avi: "\f11d";
+$font-Flaticon-031-rtf: "\f11e";
+$font-Flaticon-032-odx: "\f11f";
+$font-Flaticon-033-exe: "\f120";
+$font-Flaticon-034-drv: "\f121";
+$font-Flaticon-035-bak: "\f122";
+$font-Flaticon-036-rar: "\f123";
+$font-Flaticon-037-pps: "\f124";
+$font-Flaticon-038-pub: "\f125";
+$font-Flaticon-039-tiff: "\f126";
+$font-Flaticon-040-mp4: "\f127";
+$font-Flaticon-041-css: "\f128";
+$font-Flaticon-042-sql: "\f129";
+$font-Flaticon-043-gz: "\f12a";
+$font-Flaticon-044-cad: "\f12b";
+$font-Flaticon-045-pptx: "\f12c";
+$font-Flaticon-046-svg: "\f12d";
+$font-Flaticon-047-mp3: "\f12e";
+$font-Flaticon-048-ai: "\f12f";
+$font-Flaticon-049-gif: "\f130";
+$font-Flaticon-050-txt: "\f131";
+$font-Flaticon-051-psd: "\f132";
+$font-Flaticon-052-png: "\f133";
+$font-Flaticon-053-ppt: "\f134";
+$font-Flaticon-054-asf: "\f135";
+$font-Flaticon-055-html: "\f136";
+$font-Flaticon-056-zip: "\f137";
+$font-Flaticon-057-log: "\f138";
+$font-Flaticon-058-xls: "\f139";
+$font-Flaticon-059-docx: "\f13a";
+$font-Flaticon-060-csv: "\f13b";
+$font-Flaticon-061-xml: "\f13c";
+$font-Flaticon-062-xlsx: "\f13d";
+$font-Flaticon-063-jpg: "\f13e";
+$font-Flaticon-064-doc: "\f13f";
+$font-Flaticon-065-fon: "\f140";
+$font-Flaticon-066-pdf: "\f141";
+$font-Flaticon-067-vob: "\f142";
+$font-Flaticon-068-otf: "\f143";
+$font-Flaticon-069-ra: "\f144";
+$font-Flaticon-070-dtd: "\f145";
+$font-Flaticon-071-pl: "\f146";
+$font-Flaticon-072-wps: "\f147";
+$font-Flaticon-073-odg: "\f148";
+$font-Flaticon-074-pdb: "\f149";
+$font-Flaticon-075-dmg: "\f14a";
+$font-Flaticon-076-cer: "\f14b";
+$font-Flaticon-077-wpd: "\f14c";
+$font-Flaticon-078-rm: "\f14d";
+$font-Flaticon-079-cab: "\f14e";
+$font-Flaticon-080-tga: "\f14f";
+$font-Flaticon-081-kmz: "\f150";
+$font-Flaticon-082-icns: "\f151";
+$font-Flaticon-083-mid: "\f152";
+$font-Flaticon-084-rpm: "\f153";
+$font-Flaticon-085-cfg: "\f154";
+$font-Flaticon-086-dem: "\f155";
+$font-Flaticon-087-aif: "\f156";
+$font-Flaticon-088-cue: "\f157";
+$font-Flaticon-089-elf: "\f158";
+$font-Flaticon-090-otf: "\f159";
+$font-Flaticon-091-m4a: "\f15a";
+$font-Flaticon-092-m4v: "\f15b";
+$font-Flaticon-093-odp: "\f15c";
+$font-Flaticon-094-cpl: "\f15d";
+$font-Flaticon-095-mdf: "\f15e";
+$font-Flaticon-096-tmp: "\f15f";
+$font-Flaticon-097-dxf: "\f160";
+$font-Flaticon-098-cgi: "\f161";
+$font-Flaticon-099-sys: "\f162";
+$font-Flaticon-100-ics: "\f163";
+$font-Flaticon-101-aac: "\f164";
+$font-Flaticon-102-ogg: "\f165";
+$font-Flaticon-103-odf: "\f166";
+$font-Flaticon-104-m3u: "\f167";
+$font-Flaticon-105-msg: "\f168";
+$font-Flaticon-106-msi: "\f169";
+$font-Flaticon-107-com: "\f16a";
+$font-Flaticon-108-obj: "\f16b";
+$font-Flaticon-109-dat: "\f16c";
+$font-Flaticon-110-odt: "\f16d";
+$font-Flaticon-111-dds: "\f16e";
+$font-Flaticon-112-ttf: "\f16f";
+$font-Flaticon-113-indd: "\f170";
+$font-Flaticon-114-3gp: "\f171";
+$font-Flaticon-115-tar: "\f172";
+$font-Flaticon-116-lua: "\f173";
+$font-Flaticon-117-fla: "\f174";
+$font-Flaticon-118-vcf: "\f175";
+$font-Flaticon-119-dmp: "\f176";
+$font-Flaticon-120-gzip: "\f177";
+$font-Flaticon-121-rom: "\f178";
+$font-Flaticon-122-rss: "\f179";
+$font-Flaticon-123-swf: "\f17a";
+$font-Flaticon-124-wma: "\f17b";
+$font-Flaticon-125-vb: "\f17c";
+$font-Flaticon-126-3ds: "\f17d";
+$font-Flaticon-127-jsp: "\f17e";
+$font-Flaticon-128-kml: "\f17f";
+$font-Flaticon-129-ods: "\f180";
+$font-Flaticon-130-wmv: "\f181";
+$font-Flaticon-131-dbf: "\f182";
+$font-Flaticon-132-tex: "\f183";
+$font-Flaticon-133-gpx: "\f184";
+$font-Flaticon-134-dll: "\f185";
+$font-Flaticon-135-odi: "\f186";
+$font-Flaticon-136-ged: "\f187";
+$font-Flaticon-137-odt: "\f188";
+$font-Flaticon-138-asp: "\f189";
+$font-Flaticon-139-lnk: "\f18a";
+$font-Flaticon-140-flv: "\f18b";
+$font-Flaticon-141-eps: "\f18c";
+$font-Flaticon-142-bin: "\f18d";
+$font-Flaticon-143-max: "\f18e";
+$font-Flaticon-144-cpp: "\f18f";
+$font-Flaticon-145-sav: "\f190";
+$font-Flaticon-146-srt: "\f191";
+$font-Flaticon-147-mpg: "\f192";
+$font-Flaticon-148-jar: "\f193";
+$font-Flaticon-149-7z: "\f194";
+$font-Flaticon-150-mdb: "\f195";

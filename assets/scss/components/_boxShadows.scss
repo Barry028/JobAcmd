@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Components > BoxShadows
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.shd-none {
+    @include shd-none;
+}
+
+.shd-betw {
+    &:after {
+        @include shd-paper-lt;
+    }
+
+    &:before {
+        @include shd-paper-rt;
+    }
+}
+
+.shd-lt {
+    &:before {
+        @include shd-paper-lt;
+    }
+}
+
+.shd-rt {
+    &:after {
+        @include shd-paper-rt;
+    }
+}
+
+.shd--ver_ {
+    &1 {
+        @include shd--ver_1;
+    }
+
+    &2 {
+        @include shd--ver_2;
+    }
+
+    &3 {
+        @include shd--ver_3;
+    }
+
+    &4 {
+        @include shd--ver_4;
+    }
+
+    &5 {
+        @include shd--ver_5;
+    }
+
+    &6 {
+        @include shd--ver_6;
+    }
+
+    &7 {
+        @include shd--ver_7;
+    }
+
+    &8 {
+        @include shd--ver_8;
+    }
+
+    &9 {
+        @include shd--ver_9;
+    }
+
+    &10 {
+        @include shd--ver_10;
+    }
+
+    &11 {
+        @include shd--ver_11;
+    }
+
+    &12 {
+        @include shd--ver_12;
+    }
+
+    &13 {
+        @include shd--ver_13;
+    }
+
+    &14 {
+        @include shd--ver_14;
+    }
+
+    &15 {
+        @include shd--ver_15;
+    }
+
+    &16 {
+        @include shd--ver_16;
+    }
+
+    &17 {
+        @include shd--ver_17;
+    }
+
+    &18 {
+        @include shd--ver_18;
+    }
+}
+
+.shd--hv--ver_ {
+    &1 {
+        @include shd--hv--ver_1;
+
+        transition: $transition-base;
+    }
+
+    &2 {
+        @include shd--hv--ver_2;
+
+        transition: $transition-base;
+    }
+
+    &3 {
+        @include shd--hv--ver_3;
+
+        transition: $transition-base;
+    }
+
+    &4 {
+        @include shd--hv--ver_4;
+
+        transition: $transition-base;
+    }
+
+    &5 {
+        @include shd--hv--ver_5;
+
+        transition: $transition-base;
+    }
+}
+
+

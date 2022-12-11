@@ -1,0 +1,34 @@
+2022/01/27 更新
+
+// 障別表單 HTML
+apply_member.html
+
+323 - 334 行
+777 - 792 行
+975 - 990 行
+1056 - 1071 行
+
+1. Step 1 - 4 .form-footer 改成下列樣式 （主要多.<div class="btn-group"> 一層）
+
+<div class="form-footer f-align-justify">
+  <div class="btn-group">
+    <button type="button" class="btn btn--shadow--lightgrey btn--icon--lt btn--icon--md btn--md js-prev" title="登入" data-class=".js-form-four">
+      <i class="tu-arrow-left"></i>
+      <font>回上一步</font>
+    </button>
+    <button type="button" class="btn btn--shadow--light btn--icon btn--icon--md btn--md" title="暫存">
+      <font>暫存</font>
+      <i class="tu-inbox"></i>
+    </button>
+  </div>
+  <button type="button" class="btn btn--shadow--primary btn--icon btn--icon--lg btn--lg js-next" title="登入" data-class=".js-form-four">
+    <font>下一步，送出申請資料</font>
+    <i class="tu-arrow-right"></i>
+  </button>
+</div>
+</div>
+
+
+// Css
+main.css
+

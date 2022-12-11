@@ -1,0 +1,407 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Pages > Work Show
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.work-show-inner-section {
+    background-color: $white;
+    padding: 0 0 2rem 0;
+
+    .filter-tools {
+        margin-bottom: 1rem;
+    }
+
+    .work-card {
+        margin: 1rem .5rem;
+    }
+}
+
+.work-show-inner {
+    background-color: $white;
+    padding: 2rem 0;
+
+    .work-show-inner-panel {
+        // background-color: $azure;
+        // border-radius: 4px;
+        // padding: 1rem 2rem;
+
+        hr {
+            border-bottom: 2px solid lighten($tertiary, 30%);
+            margin: 1.5rem 0 1rem;
+        }
+    }
+
+    .page-tags {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+
+        .unit--tag,
+        .date--tag {
+            border-radius: 2rem;
+            font-size: 1rem;
+            padding: .375rem 1rem;
+            user-select: none;
+            @include in-bk-mid;
+        }
+
+        .unit--tag {
+            background-color: $tertiary;
+            color: $white;
+            margin-right: .5rem;
+        }
+
+        .date--tag {
+            background-color: $grey-100;
+            color: $dark;
+
+            i,font {
+            	vertical-align: middle;
+            }
+        }
+    }
+
+    .page-sub-heading {
+        font-size: 1.625rem;
+        margin-top: 1.25rem;
+    }
+
+    .page-img-banner {
+        background-color: $default;
+        border-radius: 12px;
+        margin-top: 1.5rem;
+        padding: .5rem;
+        width: 100%;
+
+        img {
+        	border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;';
+        }
+    }
+
+    .page-content {
+        margin-top: 1rem;
+        padding: 0 1rem 1rem;
+
+        .page-content-list-group {
+            &.list-primary {
+                .page-content-title {
+                    background-color: $primary;
+                }
+
+                .page-list {
+                    .page-list-item {
+                        border-left: 4px solid $primary;
+
+                        &:hover {
+                            background-color: lighten($primary, 38%);
+                        }
+
+                        .competition-img {
+                            .more {
+                                background: $primary;
+                            }
+                        }
+
+                        .competition-name {
+                            .competition-tag {
+                                background-color: darken($primary, 10%);
+
+                                &:after {
+                                    border-color: darken($primary, 10%);
+                                    border-right-color: transparent;
+                                }
+
+                                &:before {
+                                    border-right-color: darken($primary, 10%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.list-secondary {
+                .page-content-title {
+                    background-color: $secondary;
+                }
+
+                .page-list {
+                    .page-list-item {
+                        border-left: 4px solid $secondary;
+
+                        &:hover {
+                            background-color: lighten($secondary, 38%);
+                        }
+
+                        .competition-img {
+                            .more {
+                                background: $secondary;
+                            }
+                        }
+
+                        .competition-name {
+                            .competition-tag {
+                                background-color: darken($secondary, 10%);
+
+                                &:after {
+                                    border-color: darken($secondary, 10%);
+                                    border-right-color: transparent;
+                                }
+
+                                &:before {
+                                    border-right-color: darken($secondary, 10%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.list-tertiary {
+                .page-content-title {
+                    background-color: $tertiary;
+                }
+
+                .page-list {
+                    .page-list-item {
+                        border-left: 4px solid $tertiary;
+
+                        &:hover {
+                            background-color: lighten($tertiary, 47.5%);
+                        }
+
+                        .competition-img {
+                            .more {
+                                background: $tertiary;
+                            }
+                        }
+
+                        .competition-name {
+                            .competition-tag {
+                                background-color: darken($tertiary, 10%);
+
+                                &:after {
+                                    border-color: darken($tertiary, 10%);
+                                    border-right-color: transparent;
+                                }
+
+                                &:before {
+                                    border-right-color: darken($tertiary, 10%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.list-info {
+                .page-content-title {
+                    background-color: $info;
+                }
+
+                .page-list {
+                    .page-list-item {
+                        border-left: 4px solid $info;
+
+                        &:hover {
+                            background-color: lighten($info, 42%);
+                        }
+
+                        .competition-img {
+                            .more {
+                                background: $info;
+                            }
+                        }
+
+                        .competition-name {
+                            .competition-tag {
+                                background-color: darken($info, 10%);
+
+                                &:after {
+                                    border-color: darken($info, 10%);
+                                    border-right-color: transparent;
+                                }
+
+                                &:before {
+                                    border-right-color: darken($info, 10%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .page-content-title {
+                display: inline-block;
+                border-radius: 4px;
+                color: $white;
+                font-size: 1.125rem;
+                font-weight: normal;
+                letter-spacing: .5px;
+                margin-top: .5rem;
+                padding: .25rem 1rem;
+                user-select: none;
+            }
+
+            .page-list {
+                font-size: 0;
+                margin-top: 1rem;
+
+                .page-list-item {
+                    background-color: $default;
+                    // border: 1px solid $border-color;
+                    border-left: 4px solid $info;
+                    border-radius: 4px;
+                    margin-bottom: .75rem;
+                    padding: .5rem 1rem .5rem;
+                    transition: $transition-base;
+
+                    &:hover {
+                        background-color: lighten($info, 47.5%);
+                   
+                    }
+
+                    .competition-img {
+                        @include in-bk-mid;
+
+                        background-color: $white;
+                        border: lighten($light, 2.5%) 1px solid;
+                        border-radius: 50%;
+                        transition: $transition-base;
+                        width: 6rem;
+                        height: 6rem;
+
+                        @media all and (max-width: $screen-sm-min) {
+                            width: 8rem;
+                            height: 8rem;
+                        }
+
+                        &:hover {
+                            .more {
+                                opacity: .88;
+                                text-decoration: none;
+                            }
+                        }
+
+                        .more {
+                            background: $info;
+                            border-radius: 50%;
+                            opacity: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            transition: .25s;
+                            height: 100%;
+                            width: 100%;
+                            user-select: none;
+                            z-index: 2;
+
+                            .more-cnt {
+                                @include position-ab-center;
+
+                                text-align: center;
+                                width: 100%;
+
+                                .more-icon {
+                                    color: $white;
+                                    display: block;
+                                    font-size: 1.5rem;
+                                }
+
+                                .more-txt {
+                                    color: $white;
+                                    font-size: .875rem;
+                                    margin-top: .5rem;
+                                }
+                            }
+                        }
+
+                        .img-fluid {
+                            display: block;
+                            border-radius: 50%;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            font-family: 'object-fit: contain;';
+                        }
+                    }
+
+                    .competition-name {
+                        @include in-bk-mid;
+
+                        padding-left: 1rem;
+                        width: calc(100% - 6rem - 10rem);
+
+                        @media all and (max-width: $screen-sm-min) {
+                            width: calc(100% - 8rem);
+                        }
+
+                        .competition-tag {
+                            // background-color: darken($info, 10%);
+                            color: $white;
+                            font-size: 0.875rem;
+                            font-weight: bolder;
+                            display: inline-block;
+                            padding: 0.275rem 0.5rem;
+                            height: 1.75rem;
+                            user-select: none;
+
+                            &:after {
+                                content: '';
+                                display: inline-block;
+                                position: absolute;
+                                top: 0;
+                                right: -0.5rem;
+                                border: 1px solid transparent;
+
+                                // border-color: darken($info, 10%);
+                                border-right-color: transparent;
+                                border-width: 0.875rem 0.5rem;
+                            }
+
+                            &:before {
+                                content: '';
+                                display: inline-block;
+                                position: absolute;
+                                top: 0;
+                                left: -1rem;
+                                border: 1px solid transparent;
+
+                                // border-right-color: darken($info, 10%);
+                                border-width: 0.875rem 0.5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.125rem;
+                            font-weight: bolder;
+                            margin-top: .5rem;
+                        }
+                    }
+
+                    .competition-link {
+                        @include in-bk-mid;
+
+                        font-size: 1rem;
+                        text-align: center;
+                        width: 10rem;
+
+                        @media all and (max-width: $screen-sm-min) {
+                            margin-top: 1rem;
+                            width: 100%;
+                        }
+
+                        .btn {
+                            // background-color: $white;
+                            border-radius: 3rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

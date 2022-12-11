@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  COMPONENTS > LOADING
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.ic-preloader {
+    &--black {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' width='34px' height='34px' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z' fill='%23000000' fill-opacity='1'/%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 64 64' to='360 64 64' dur='800ms' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    &--white {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' width='34px' height='34px' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z' fill='%23ffffff' fill-opacity='1'/%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 64 64' to='360 64 64' dur='800ms' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    &--green {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' width='34px' height='34px' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .circle-preloader-0%7Bfill:%230ABF53;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='circle-preloader-0' d='M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z'/%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 64 64' to='360 64 64' dur='800ms' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+}
+
+.pace {
+    pointer-events: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: $primary;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 3px;
+    z-index: 2000;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($primary, 0.72);
+    transition: $transition-base;
+    z-index: 9999;
+
+    .loader-cnt {
+        @include position-ab-center;
+    }
+
+    #lottie_load {
+        width: 12rem;
+        height: 12rem;
+    }
+}

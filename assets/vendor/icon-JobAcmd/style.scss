@@ -1,0 +1,55 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sm7lzk');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sm7lzk#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sm7lzk') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sm7lzk') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sm7lzk##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ja-"], [class*=" ja-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ja-font-big {
+  &:before {
+    content: $ja-font-big; 
+  }
+}
+.ja-font-default {
+  &:before {
+    content: $ja-font-default; 
+  }
+}
+.ja-font-small {
+  &:before {
+    content: $ja-font-small; 
+  }
+}
+.ja-clock {
+  &:before {
+    content: $ja-clock; 
+  }
+}
+.ja-phone {
+  &:before {
+    content: $ja-phone; 
+  }
+}
+

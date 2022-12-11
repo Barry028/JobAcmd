@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Pages > 404
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.not-found {
+    @include padding(y, 2rem);
+
+    .not-found-cnt {
+        display: table;
+
+        @extend %w--100;
+
+        .not-found-img {
+            @include tb-cell-mid;
+
+            @extend %w--40;
+        }
+
+        .not-found-txt {
+            @include tb-cell-mid;
+
+            @extend %w--60;
+
+            h1 {
+                font-size: 4rem;
+
+                @extend %text--primary;
+            }
+
+            h2 {
+                @extend %text--grey;
+            }
+
+            p {
+                margin-top: 1rem;
+            }
+
+            a {
+                margin-top: .75rem;
+            }
+        }
+    }
+}

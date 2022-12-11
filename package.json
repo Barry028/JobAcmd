@@ -1,0 +1,46 @@
+{
+  "name": "JobAcmd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "blueimp-file-upload": "^10.32.0",
+    "blueimp-tmpl": "^3.20.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-uglifycss": "^1.1.0",
+    "lodash": "^4.17.21",
+    "tw-city-selector": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "animate-sass": "^0.8.2",
+    "autoprefixer": "^10.2.4",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "cssnano": "^5.0.13",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.5",
+    "sass": "^1.32.8"
+  },
+  "browserslist": [
+    "last 4 version",
+    "> 1%",
+    "IE 9"
+  ]
+}

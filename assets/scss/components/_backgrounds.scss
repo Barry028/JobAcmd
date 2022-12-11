@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+/** –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  COMPONENTS > BACKGROUNDS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@each $color,
+$value in $bg-colors {
+    .bg--#{$color} {
+        background-color: $value;
+    }
+
+    %bg--#{$color} {
+        background-color: $value;
+    }
+}
+
+/*
+  Background Gradient dark
+------------------------------------*/
+.bg-gd-dark--v1 {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
+}
+
+.bg-gd-dark--v2 {
+    @include gradient-directional($start-color: #0b011d, $end-color: #330c3c, $deg: 225deg);
+}
+
+.bg-gd-dark--v3 {
+    background-image: radial-gradient(circle farthest-corner at -4% -12.9%, rgba(74, 98, 110, 1) 0.3%, rgba(30, 33, 48, 1) 90.2%);
+}
+
+.bg-gd-dark--v4 {
+    @include gradient-radial($start-color: #596070, $inner-color: #596070, $outer-color: #31353e, $type: circle farthest-side at 110% 0);
+}
+
+.bg-gd-dark--v5 {
+    @include gradient-directional($start-color: rgba(73, 93, 109, 1), $end-color: rgba(49, 55, 82, 1), $deg: 112deg);
+
+    background-blend-mode: multiply, multiply;
+}
+
+.bg-gd-dark--v6 {
+    @include gradient-x($start-color: rgba(26, 33, 64, 1), $end-color: rgba(81, 84, 115, 1));
+
+    background-blend-mode: multiply, multiply;
+}
+
+/*
+  Background Gradient gray
+------------------------------------*/
+.bg-gd-gray--v1 {
+    @include gradient-y($start-color: #fff, $end-color: #dbdbdb);
+}
+
+.bg-gd-gray--v2 {
+    @include gradient-radial($start-color: #fff, $inner-color: #fff 22%, $outer-color: #d6e2ee, $type: ellipse farthest-corner at 50% 50%);
+}
+
+.bg-gd-gray--v3 {
+    @include gradient-radial($start-color: #dbdbdb, $inner-color: #dbdbdb 22%, $outer-color: #bbb, $type: ellipse farthest-corner at 50% 50%);
+}
+
+.bg-gd-gray--v4 {
+    background-repeat: no-repeat;
+
+    @include gradient-radial($start-color: #fff, $inner-color: #fff 25%, $outer-color: #eee, $type: ellipse farthest-corner at 50% 50%);
+}
+
+.bg-gd-gray--v5 {
+    @include gradient-radial($start-color: #fff, $inner-color: #fff, $outer-color: #d6e2ee, $type: circle farthest-corner at 75% 95%);
+}
+
+.bg-gd-gray--v6 {
+    background: repeating-linear-gradient(to bottom, #fff, #fff 5px, #eee 5px, #eee 10px);
+}
+
+.bg-gd-gray--v7 {
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+
+    // background-blend-mode: screen;
+}
+
+.bg-gd-gray--v8 {
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
+
+    // background-blend-mode: screen;
+}
+
+.bg-gd-gray--v9 {
+    background-color: #CDDCDC;
+    background-image: radial-gradient(at 50% 100%, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+
+    // background-blend-mode: screen, overlay;
+}
+
+.bg-gd-gray--v10 {
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+}
+
+.bg-gd-gray--v11 {
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.bg-gd-gray--v12 {
+    background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);
+}
+
+/*
+  Background Gradient blue
+------------------------------------*/
+.bg-gd-blue--v1 {
+    @include gradient-directional($start-color: #6a11cb, $end-color: #2575fc, $deg: 45deg);
+}
+
+.bg-gd-blue--v2 {
+    background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
+}
+
+.bg-gd-blue--v3 {
+    background-image: linear-gradient(179deg, rgba(7, 62, 137, 1) 31%, rgba(13, 79, 170, 1) 80.2%);
+}
+
+.bg-gd-blue--v4 {
+    background-image: linear-gradient(109.6deg, rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%);
+}
+
+.bg-gd-blue--v5 {
+    @include gradient-directional($start-color: #429edc, $end-color: #00629e, $deg: 225deg);
+}
+
+.bg-gd-blue--v6 {
+    @include gradient-directional($start-color: #3266a2, $end-color: #98cfbf, $deg: 225deg);
+}
+
+.bg-gd-blue--v7 {
+    @include gradient-directional($start-color: #5b85df, $end-color: #3ec2e3, $deg: 225deg);
+}
+
+.bg-gd-blue--v8 {
+    background-image: linear-gradient(103deg, rgba(137, 247, 234, 1) 7.3%, rgba(102, 117, 241, 1) 100.2%);
+}
+
+.bg-gd-blue--v9 {
+    @include gradient-radial($start-color: #2294d7, $inner-color: #2294d7, $outer-color: #275296, $type: circle farthest-side at 50% 50%);
+}
+
+.bg-gd-blue--v10 {
+    background-image: linear-gradient(109.6deg, rgba(62, 161, 219, 1) 11.2%, rgba(93, 52, 236, 1) 100.2%);
+}
+
+.bg-gd-blue--v11 {
+    @include gradient-directional($start-color: #8BC6EC, $end-color: #9599E2, $deg: 135deg);
+}
+
+.bg-gd-blue--v12 {
+    background-image: repeating-radial-gradient(circle at 50% 50%, #b9ecfe, #b9ecfe 10px, #82ddff 10px, #82ddff 20px);
+}
+
+/*
+  Background Gradient green
+------------------------------------*/
+.bg-gd-green--v1 {
+    @include gradient-directional($start-color: #17ead9, $end-color: #6078ea, $deg: 45deg);
+}
+
+.bg-gd-green--v2 {
+    @include gradient-directional($start-color: #00b09b, $end-color: #96c93d, $deg: 45deg);
+}
+
+.bg-gd-green--v3 {
+    background-image: radial-gradient(circle 939px at 94.7% 50%, rgba(0, 178, 169, 1) 0%, rgba(0, 106, 101, 1) 76.9%);
+}
+
+.bg-gd-green--v4 {
+    @include gradient-directional($start-color: #42e695, $end-color: #3bb2b8, $deg: 45deg);
+}
+
+.bg-gd-green--v5 {
+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.bg-gd-green--v6 {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(14, 174, 87, 1) 0%, rgba(12, 116, 117, 1) 90%);
+}
+
+.bg-gd-green--v7 {
+    background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+}
+
+.bg-gd-green--v8 {
+    background-image: linear-gradient(129.1deg, rgba(243, 199, 83, 1) 26.8%, rgba(18, 235, 207, 1) 114.1%);
+}
+
+.bg-gd-green--v9 {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 95, 104, 1) 0%, rgba(15, 156, 168, 1) 90%);
+}
+
+.bg-gd-green--v10 {
+    background-image: linear-gradient(73.1deg, rgba(34, 126, 34, 1) 8%, rgba(99, 162, 17, 1) 86.9%);
+}
+
+.bg-gd-green--v11 {
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+}
+
+.bg-gd-green--v12 {
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+}
+
+/*
+  Background Gradient red
+------------------------------------*/
+
+.bg-gd-red--v1 {
+    @include gradient-x($start-color: #ff416c, $end-color: #ff4b2b);
+}
+
+.bg-gd-red--v2 {
+    @include gradient-directional($start-color: #ee0979, $end-color: #ff6a00, $deg: 45deg);
+}
+
+.bg-gd-red--v3 {
+    @include gradient-directional($start-color: #f54ea2, $end-color: #ff7676, $deg: 45deg);
+}
+
+.bg-gd-red--v4 {
+    @include gradient-directional($start-color: #be1715, $end-color: #ed6d0f, $deg: 225deg);
+}
+
+.bg-gd-red--v5 {
+    @include gradient-directional($start-color: #b6003b, $end-color: #b6003b, $deg: 225deg);
+}
+
+.bg-gd-red--v6 {
+    background-image: radial-gradient(circle farthest-corner at 81.9% 53.5%, rgba(173, 53, 53, 1) 16.3%, rgba(240, 60, 60, 1) 100.2%);
+}
+
+.bg-gd-red--v7 {
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
+
+.bg-gd-red--v8 {
+    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+}
+
+.bg-gd-red--v9 {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+.bg-gd-red--v10 {
+    background-image: linear-gradient(68.3deg, rgba(245, 177, 97, 1) 0.4%, rgba(236, 54, 110, 1) 100.2%);
+}
+
+.bg-gd-red--v11 {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+.bg-gd-red--v12 {
+    background-image: radial-gradient(circle farthest-corner at 50.4% 50.5%, rgba(251, 32, 86, 1) 0%, rgba(135, 2, 35, 1) 90%);
+}
+
+/*
+  Background Gradient orange
+------------------------------------*/
+.bg-gd-orange--v1 {
+    @include gradient-directional($start-color: #fc4a1a, $end-color: #f7b733, $deg: 45deg);
+}
+
+.bg-gd-orange--v2 {
+    @include gradient-x($start-color: #f7971e, $end-color: #ffd200);
+}
+
+.bg-gd-orange--v3 {
+    @include gradient-directional($start-color: #ffdf40, $end-color: #ff8359, $deg: 45deg);
+}
+
+.bg-gd-orange--v4 {
+    @include gradient-directional($start-color: #f5cd21, $end-color: #c22821, $deg: 225deg);
+}
+
+.bg-gd-orange--v5 {
+    @include gradient-directional($start-color: #f59b00, $end-color: #f5d400, $deg: 225deg);
+}
+
+.bg-gd-orange--v6 {
+    @include gradient-x($primary, $danger);
+}
+
+.bg-gd-orange--v7 {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(253, 193, 104, 1) 0%, rgba(251, 128, 128, 1) 90%);
+}
+
+.bg-gd-orange--v8 {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 209, 67, 1) 0%, rgba(255, 145, 83, 1) 90%);
+}
+
+.bg-gd-orange--v9 {
+    background-image: linear-gradient(70.7deg, rgba(241, 113, 40, 1) 1.1%, rgba(245, 165, 130, 1) 86.6%);
+}
+
+.bg-gd-orange--v10 {
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+}
+
+.bg-gd-orange--v11 {
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
+
+.bg-gd-orange--v12 {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.bg-gd-purple--v1 {
+    background-image: linear-gradient(109.6deg, rgba(218, 185, 252, 1) 11.2%, rgba(125, 89, 252, 1) 91.1%);
+}
+
+.bg-gd-purple--v2 {
+    background: linear-gradient(to right, #ad5389, #3c1053);
+}
+
+.bg-gd-purple--v3 {
+    background-image: linear-gradient(109.6deg, rgba(238, 58, 136, 1) 11.2%, rgba(128, 162, 245, 1) 91.1%);
+}
+
+.bg-gd-purple--v4 {
+    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+}
+
+.bg-gd-purple--v5 {
+    background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+}
+
+.bg-gd-purple--v6 {
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+.bg-gd-purple--v7 {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gd-purple--v8 {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.bg-gd-purple--v9 {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.bg-gd-purple--v10 {
+    background-image: linear-gradient(135deg, #3B2667 10%, #BC78EC 100%);
+}
+
+.bg-gd-purple--v11 {
+    background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+}
+
+.bg-gd-purple--v12 {
+    background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+}
